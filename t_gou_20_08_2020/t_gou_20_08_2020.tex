@@ -31,6 +31,8 @@
 
 \maketitle
 
+\section{Introduction} 
+
 Suppose $f$ is $2\pi$-periodic, complex valued, integrable over $[0, 2\pi)$, then
 \begin{equation}
     \widehat{f}(n) = \frac{1}{2\pi} \int^{2\pi}_{0} f(x) e^{-inx} \ dx
@@ -106,6 +108,80 @@ In addition, $\{ e^{inx} : n \in \mathbb{Z} \}$ form an orthonormal basis for th
             \case 0, \ m\neq n \\
         \end{cases}
     \end{split}
+\end{equation}
+
+If $G$ is non-Abelian, the analogy generalising the characters is called the \textit{irreducible unitary representation} of $G$:
+\begin{equation}
+    \sigma : G \rightarrow U(\mathcal{H})
+\end{equation}
+for $\mathcal{H}$, some Hilbert space. 
+\begin{equation}
+    \begin{split}
+        \sigma(gh) &= \sigma(g)\sigma(h) \\
+        \sigma(e) &= \sigma(g g^{-1}) = \sigma(g)\sigma(g^{-1}) = \sigma(g)\sigma(g)^{*} \\
+        \langle \sigma(g)u, \sigma(g)v \rangle &= \langle u,v \rangle \\
+    \end{split}
+\end{equation}
+for $u,v \in \mathcal{H}$. We'll look at the irreducible representations of $\mathcal{SU}(2)$. $\mathcal{SU}(2)$ is the first compacy and non-abelian group we normally look at in Harmonic Analysis. 
+
+\section{Aspects of $\mathcal{SU}(2)$} 
+
+We begin by looking at $\mathcal{U}(2)$, a group of unitary transformations of $\mathbb{C}^{2}$. 
+\begin{equation}
+    A A^{*} = A^{*}A = I, A \in \mathcal{U}(2)
+\end{equation}
+$\mathcal{SU}(2) \subset \mathcal{U}(2)$ where elements of $\mathcal{SU}(2)$ have determinant 1. 
+\begin{equation}
+    \begin{cases}
+        \case \det\left( AB \right) = \det\left( A \right) \det\left( B \right), \ A,B \in \mathcal{SU}(2) \\
+        \case \det\left( I \right) = \det\left( A A^{-1} \right) = \det\left( A \right) \det\left( A^{-1} \right)
+    \end{cases}
+\end{equation}
+suppose 
+\begin{equation}
+    \begin{pmatrix}
+        \alpha & \beta \\
+        \gamma & \eta \\
+    \end{pmatrix} \in \mathcal{U}(2)
+\end{equation}
+then, $| \alpha |^{2} + | \beta |^{2} = | \gamma |^{2} + | \eta |^{2} = 1$ and $\alpha \overline{\gamma} + \beta \overline{eta} = 0$. So,
+\begin{equation}
+    \begin{pmatrix}
+        \alpha \\ \beta \\
+    \end{pmatrix},
+    \begin{pmatrix}
+        \gamma \\ \eta \\
+    \end{pmatrix}
+\end{equation}
+are unit vectors and orthogonal. Thus, 
+\begin{equation}
+    \begin{pmatrix}
+        \gamma \\ \eta \\
+    \end{pmatrix}
+    = e^{i\theta}
+    \begin{pmatrix}
+        -\overline{\beta} \\ \overline{\alpha} \\
+    \end{pmatrix},
+    \ \theta \in \mathbb{R}.
+\end{equation}
+Hence we have
+\begin{equation}
+    A =
+    \begin{pmatrix}
+        \alpha & \beta \\
+        -e^{i\theta}\overline{\beta} & e^{i\theta}\overline{\alpha} \\
+    \end{pmatrix}
+    \ \in \mathcal{U}(2)
+\end{equation}
+with $\text{det}\left( A \right) = e^{i\theta}$ and $\text{det}\left( A^{*} \right) = e^{-i\theta}$.
+If $A \in \mathcal{SU}(2)$, then 
+\begin{equation}
+    A = 
+    \begin{pmatrix}
+        \alpha & \beta \\
+        -\overline{\beta} & \overline{\alpha}
+    \end{pmatrix}
+    \in \mathcal{SU}(2).
 \end{equation}
 
 \end{document}

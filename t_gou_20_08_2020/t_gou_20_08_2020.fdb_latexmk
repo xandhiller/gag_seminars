@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1599472190 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599472190
+["pdflatex"] 1599474022 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599474022
   "/dev/null" 1598216093 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/alex/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1578140711 797357 10b20f8ae6556d590e9dbcaa14a5be9c ""
   "/home/alex/Meta/templates/tex/tex_macros.tex" 1595979055 1852 598c78a0411737d36b420cd455d4e620 ""
@@ -26,6 +26,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm" 1302307949 848 f478e0761563bbc369eca609a1741348 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm" 1302307949 848 e1bc58a31b9ed9c3729ffea165acfaac ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1302307949 848 068dd119e13b75777e62821af7d4f2a6 ""
@@ -42,6 +43,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1574090978 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex" 1563053976 72100 d39369fd03bd6ead96e9f8fdb1b30031 ""
@@ -211,11 +213,11 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1574088520 35594 9aef19174c178978f61d14961262af5d ""
   "dtper_article.tex" 1599471882 4864 2acceb4d5106bd20ed47c291b3de308d ""
-  "t_gou_20_08_2020.aux" 1599472176 736 f6963a940be18d7009f0f70740e6376e "pdflatex"
-  "t_gou_20_08_2020.out" 1599472176 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "t_gou_20_08_2020.tex" 1599472189 4409 29f6b2ef27a68f148551cbb1fb3d97d3 ""
+  "t_gou_20_08_2020.aux" 1599473966 972 f11cd3a9e448ff041d7f3dfcc48a0547 "pdflatex"
+  "t_gou_20_08_2020.out" 1599473966 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
+  "t_gou_20_08_2020.tex" 1599474022 7005 a602612bec0f92167819481145c6e5c5 ""
   (generated)
-  "t_gou_20_08_2020.out"
-  "t_gou_20_08_2020.log"
-  "t_gou_20_08_2020.pdf"
   "t_gou_20_08_2020.aux"
+  "t_gou_20_08_2020.pdf"
+  "t_gou_20_08_2020.log"
+  "t_gou_20_08_2020.out"
