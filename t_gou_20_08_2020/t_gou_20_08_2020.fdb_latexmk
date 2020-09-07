@@ -1,8 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1599469676 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599469677
+["pdflatex"] 1599472190 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599472190
   "/dev/null" 1598216093 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/alex/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1578140711 797357 10b20f8ae6556d590e9dbcaa14a5be9c ""
-  "/home/alex/Meta/templates/tex/dtper_article.tex" 1593577611 4864 2acceb4d5106bd20ed47c291b3de308d ""
   "/home/alex/Meta/templates/tex/tex_macros.tex" 1595979055 1852 598c78a0411737d36b420cd455d4e620 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -13,6 +12,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -31,6 +31,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1302307949 848 068dd119e13b75777e62821af7d4f2a6 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm" 1302307949 848 26631fcb3e4cb6757598b9cda7967b63 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1302307949 848 6125cdd3627e68d3db8013b98e587508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
@@ -209,11 +210,12 @@
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1574088520 35594 9aef19174c178978f61d14961262af5d ""
-  "t_gou_20_08_2020.aux" 1599469677 736 f6963a940be18d7009f0f70740e6376e "pdflatex"
-  "t_gou_20_08_2020.out" 1599469677 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "t_gou_20_08_2020.tex" 1599469675 2704 ba062c93fc614ca4ffd0410939ed9f18 ""
+  "dtper_article.tex" 1599471882 4864 2acceb4d5106bd20ed47c291b3de308d ""
+  "t_gou_20_08_2020.aux" 1599472176 736 f6963a940be18d7009f0f70740e6376e "pdflatex"
+  "t_gou_20_08_2020.out" 1599472176 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "t_gou_20_08_2020.tex" 1599472189 4409 29f6b2ef27a68f148551cbb1fb3d97d3 ""
   (generated)
-  "t_gou_20_08_2020.log"
   "t_gou_20_08_2020.out"
-  "t_gou_20_08_2020.aux"
+  "t_gou_20_08_2020.log"
   "t_gou_20_08_2020.pdf"
+  "t_gou_20_08_2020.aux"

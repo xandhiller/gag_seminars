@@ -277,8 +277,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 INPUT /home/alex/Meta/templates/tex/tex_macros.tex
 INPUT /home/alex/Meta/templates/tex/tex_macros.tex
-INPUT /home/alex/Meta/templates/tex/dtper_article.tex
-INPUT /home/alex/Meta/templates/tex/dtper_article.tex
+INPUT dtper_article.tex
+INPUT dtper_article.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT t_gou_20_08_2020.aux
@@ -355,9 +355,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT t_gou_20_08_2020.aux
 INPUT ./t_gou_20_08_2020.out
 INPUT ./t_gou_20_08_2020.out
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

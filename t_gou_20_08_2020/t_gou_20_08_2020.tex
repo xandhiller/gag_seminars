@@ -19,7 +19,7 @@
 \usepackage{tabularx}
 \usepackage{mdframed}
 \input{/home/alex/Meta/templates/tex/tex_macros}
-\input{/home/alex/Meta/templates/tex/dtper_article}
+\input{dtper_article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{Tim Gou}
 \title{\textbf{Groups, Analysis, and Geometry Seminars}: Harmonic Analysis of $\mathcal{SU}(2)$}
@@ -69,6 +69,43 @@ We have an ODE
 where solving the equation gives us
 \begin{equation}
     \chi(x) = e^{cx}.
+\end{equation}
+Solving it gives us $\chi(x) = e^{cx}$. Since $| \chi | = 1$, then $c=i\lambda$ with $\lambda \in \mathbb{R}$. Thus $\chi(x) = e^{i\lambda x}$ and we have characters of $\mathbb{R}$, all the $\chi_{\lambda}$ form a dual group of $\mathbb{R}$, denoted by $\widehat{\mathbb{R}}$. 
+
+Since we identify each $\chi_{\lambda}$ with $\lambda \in \mathbb{R}$, then 
+\begin{equation}
+    \widehat{\mathbb{R}} \cong \mathbb{R}.
+\end{equation}
+
+To work out $\widehat{\mathbb{T}}$, notice that 
+\begin{equation}
+    \mathbb{T} \cong \mathbb{R} / 2\pi \mathbb{Z}
+\end{equation}
+i.e. each element in $[0, 2\pi)$ is a representative of the cosets of $\mathbb{R} / 2 \pi \mathbb{Z}$. Suppose $x, y \in \mathbb{R}/2\pi \mathbb{Z}$ and $x+y = 2\pi$, then
+\begin{equation}
+    \chi(x+y) = \chi(0) = 1 = e^{i\lambda (x+y)}
+\end{equation}
+we know $\lambda \in \mathbb{R}$, but the only way $e^{i\lambda(x+y)}=1$ is that $\lambda \in \mathbb{Z}$. So all the $\chi_{n}(x) = e^{inx}$ for the dual group $\widehat{\mathbb{T}}$, and 
+\begin{equation}
+    \widehat{\mathbb{T}} \cong \mathbb{Z}.
+\end{equation}
+Similarly, we have $\mathbb{R}^{n} \cong \mathbb{R}^{n}$ and $\widehat{\mathbb{T}} \cong \mathbb{Z}^{n}$.
+
+\begin{theorem}
+    If $G$ is compact, $\widehat{G}$ is discrete.
+\end{theorem} 
+
+In addition, $\{ e^{inx} : n \in \mathbb{Z} \}$ form an orthonormal basis for the Hilbert space $L^{2}(\mathbb{T})$, with respect to its inner product, i.e.
+\begin{equation}
+    \begin{split}
+        \langle e^{imx}, e^{inx} \rangle 
+        &= \frac{1}{2\pi} \int^{2\pi}_{0} e^{imx} e^{-inx} \ dx \\
+        &= \delta_{mn} = 
+        \begin{cases}
+            \case 1, \ m=n \\
+            \case 0, \ m\neq n \\
+        \end{cases}
+    \end{split}
 \end{equation}
 
 \end{document}
