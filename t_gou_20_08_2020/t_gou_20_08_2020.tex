@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath}      % Mathematics
+\usepackage{amssymb}      % Mathematics
+\usepackage{listings}     % Listings
+%\usepackage{esint}       % Mathematics (Causing problems with mdframed)
+\usepackage{color}        % Listings
+\usepackage{courier}      % Listings
+\usepackage[oldvoltagedirection]{circuitikz}   % Circuits
+\usepackage{titlesec}     % Section Formatting
+\usepackage{stmaryrd}     % \mapsfrom arrow. 
+\usepackage{mathtools}    % \coloneqq
+\usepackage{svg}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{mdframed}
+\input{/home/alex/Meta/templates/tex/tex_macros}
+\input{/home/alex/Meta/templates/tex/dtper_article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Tim Gou}
+\title{\textbf{Groups, Analysis, and Geometry Seminars}: Harmonic Analysis of $\mathcal{SU}(2)$}
+\date{20th August, 2020}
+\usepackage{geometry} % Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+Suppose $f$ is $2\pi$-periodic, complex valued, integrable over $[0, 2\pi)$, then
+\begin{equation}
+    \widehat{f}(n) = \frac{1}{2\pi} \int^{2\pi}_{0} f(x) e^{-inx} \ dx
+\end{equation}
+with $n \in \mathbb{Z}$, is the Fourier transform of $f$. Question: What is $e^{inx}$? Why is $n \in \mathbb{Z}$? Answer: $e^{inx}$ is the character of circle group, denoted by $\mathbb{T}$ (i.e. $e^{ix} \in \mathbb{T}$).
+
+A character is a continuous homomorphism from a locally compact Abelian group $G$ to $\mathbb{T}$: $ \chi : G \rightarrow \mathbb{T} $
+where
+\begin{equation}
+    \chi(gh) = \chi(g)\chi(h)
+\end{equation}
+for $g,h \in G$. Let's work out $\chi : \mathbb{R} \rightarrow \mathbb{T}$ first, where $\mathbb{R}$ is the group $(\mathbb{R}, +)$. Since $\chi(0)=1$ (identity to identity) and $\chi$ is continuous, then $\exists a > 0$ such that
+\begin{equation}
+    \int^{a}_{0} \chi(y) \ dy.
+\end{equation}
+Let $\xi = \int^{a}_{0} \chi(y) \ dy$, then 
+\begin{equation}
+    \chi(x)\xi = \int^{a}_{0} \chi(x+y) \ dy = \int^{a+x}_{x} \chi(t) \ dt
+\end{equation} 
+so
+\begin{equation}
+    \chi(x) = \xi^{-1} \int^{a+x}_{x} \chi(t) \ dt
+\end{equation}
+and
+\begin{equation}
+    \begin{split}
+        \chi'(x) &= \xi^{-1} \left(\chi(a+x) - \chi(x) \right) \\
+                 &= \xi^{-1} \chi(x) \left(\chi(a) - 1\right) \\
+                 &= c \chi(x).
+    \end{split}
+\end{equation}
+We have an ODE
+\begin{equation}
+    \chi'(x) = c \chi(x)
+\end{equation}
+where solving the equation gives us
+\begin{equation}
+    \chi(x) = e^{cx}.
+\end{equation}
+
+\end{document}
+
