@@ -419,6 +419,27 @@ The surface measure of $S^{3}$ is exactly
     \end{split}
 \end{equation}
 
+\begin{theorem}
+    If $f: \mathbb{C}^{2} \rightarrow \mathbb{C}$  satisfies $f(aZ) = a^{m}f(z)$  for $a>0$ , then
+    \begin{equation}
+        \int_{S^{3}} f(\tilde{z}) \ d\mu(\tilde{z})
+        =
+        \frac{1}{\pi^{2} \Gamma(\frac{m+4}{2})} \int_{\mathbb{C}^{2}} f(Z) e^{- | Z |^{2}} \ dZ.
+    \end{equation}
+\end{theorem}
+
+\begin{proof}
+    We integrate in polar coordinates:
+    \begin{equation}
+        \begin{split}
+            \int_{\mathbb{C}^{2}} f(Z) e^{-| Z |^{2}} \ dZ 
+            &= 2\pi^{2} \int^{\infty}_{0} \int^{}_{S^{3}} f(r \tilde{z}) e^{-r^{3}} r^{3} \ d\mu(\tilde{z}) \ dr \\
+            &= 2\pi^{2} \int^{\infty}_{0} e^{-r^{3}}(?) r^{3} \int^{}_{S^{3}} f(r \tilde{z}) \ d\mu(\tilde{z}) \ dr \\
+            &= 2 \pi^{2} \frac{1}{2} \Gamma (\frac{m+4}{2}) \int_{S^{3}} f(\tilde{z}) \ d\mu(\tilde{z})
+        \end{split}
+    \end{equation}
+\end{proof}
+
 
 \end{document}
 
