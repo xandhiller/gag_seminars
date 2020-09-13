@@ -18,6 +18,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
 \usepackage{mdframed}
+\usepackage{pgfplots}
 \input{/home/alex/Meta/templates/tex/tex_macros}
 \input{dtper_article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,7 +27,6 @@
 \date{20th August, 2020}
 \usepackage{geometry} % Formatting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
 \maketitle
@@ -518,6 +518,161 @@ Therefore, each orthogonal vector $z^{m-j}w^{j}$ of $P_m$ is an eigenvector of $
         0  &0  &0 &0    & e^{-im\theta} \\		
     \end{bmatrix}
 \end{equation}
+So, 
+\begin{equation}
+    \begin{split}
+        \text{Tr}\left(\sigma_m(A_{\alpha, 0})\right) &=
+        \sum_{j=0}^{m} e^{i(m-2j)\theta} \\
+        &=\frac{e^{i(m+2)\theta}-e^{-im\theta}}{e^{2i\theta}-1} \\
+        &= \frac{e^{i(m+1)\theta}-e^{-i(m+1)\theta}}{e^{i\theta}-e^{-i\theta}}\\
+        &= \frac{ \sin\left((m+1)\theta\right)}{ \sin\left(\theta\right)}
+    \end{split}
+\end{equation}
+By theorem ??, every $\chi \in \mathcal{SU}(2)$ can be written as 
+\begin{equation}
+    \chi = g^{-1}t g \ : \ \exists g \in \mathcal{SU}(2), t \in \mathbb{T}. 
+\end{equation}
+So, by the cyclic property of trace we have
+\begin{equation}
+    \begin{split}
+        \text{Tr}\left(\sigma_m(g^{-1}t g)\right) &= 
+        \text{Tr}\left(\sigma_m(g)^{-1}\sigma_m(t)\sigma_m(g)\right) \\
+        &= \text{Tr}\left(\sigma_m(t)\right).
+    \end{split}
+\end{equation}
+Hence, we could conclude that every $\sigma_m$ looks like $\frac{ \sin\left((m+1)\theta\right)}{ \sin\left(\theta\right)}$.
 
+\begin{figure}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[axis lines = left, domain=-4.5:4.5, samples=100, smooth]
+            \addplot[smooth] {sin(3*deg(x))/sin(deg(x))}; 
+        \end{axis}
+    \end{tikzpicture}
+    \caption{An example of $\frac{ \sin\left((m+1)\theta\right)}{ \sin\left(\theta\right)}$when $m=2$.}
+\end{center}
+\end{figure}
+
+The trace character simply does not give enough information about $\sigma_m$, so we still need to work out the matrix coefficients of $\sigma_m$. Suppose 
+\begin{equation}
+    e_{j}(z,w) = \sqrt{\frac{(m+1)!}{(m-j)!j!}}z^{m-j}w^{j}
+\end{equation}
+and let 
+\begin{equation}
+    \sigma_m(\alpha, \beta) = \sigma_m(A_{\alpha,\beta}).
+\end{equation}
+Then the matrix coefficient $\sigma^{jk}_{m}(\alpha,\beta)$ can be recovered by
+\begin{equation}
+    \sigma^{jk}_{m}(\alpha,\beta)= \langle \sigma_m(\alpha,\beta)e_k, e_j \rangle
+\end{equation}
+where the right-hand-side is the inner product on $L^{2}(S^{3})$ . Following this we have
+\begin{equation}
+    \begin{split}
+        \sigma_m(\alpha, \beta)\cdot e_k (z,w) &=
+        \sqrt{\frac{(m+1)!}{(m-k)!k!}}(\overline{\alpha}z - \beta w)^{m-k}(\overline{\beta}z+\alpha w)^{k} \\
+        &= \sum_{j=0}^{m} \sigma^{jk}_{m}(\alpha,\beta)e_j(z,w) \\
+        &= \sum_{j=0}^{m} \sqrt{\frac{(m+1)!}{(m-j)!j!}} \sigma^{jk}_{m}(\alpha,\beta)z^{m-j}w^{j}.
+    \end{split}
+\end{equation}
+Thus, we have
+\begin{equation}
+        \sum_{j=0}^{m} \sqrt{\frac{(m+1)!}{(m-j)!j!}} \sigma^{jk}_{m}(\alpha,\beta)z^{m-j}w^{j}
+        =
+        (\overline{\alpha}z - \beta w)^{m-k}(\overline{\beta}z+\alpha w)^{k}. \\
+\end{equation}
+We can solve this by multiplying out the right hand side and matching the coefficients of $z^{m-j}w^{j}$. However, observe and realise that if we let $z=1$, $w=e^{ix}$, then we have
+\begin{equation}
+    \sum_{j=0}^{m} \sigma^{jk}_{m}(\alpha,\beta)e^{ij\chi} 
+    =
+    \underbrace{
+    (\overline{\alpha}- \beta e^{i\chi})^{m-k}(\overline{\beta}+\alpha e^{i\chi})^{k}}_{ \in L^{2}(\mathbb{T})(?)}
+\end{equation}
+Thus, we have
+\begin{equation}
+    \sigma^{jk}_{m}(\alpha,\beta) = 
+    \sqrt{\frac{(m-j)!j!}{(m-k)!k!}}\cdot \frac{1}{2\pi} \int^{2\pi}_{0} (\overline{\alpha}- \beta e^{i\chi})^{m-k}(\overline{\beta}+\alpha e^{i\chi})^{k} e^{-ij\chi} \ d\chi
+\end{equation}
+Let us write down $\sigma_m$ for a few $m$.
+
+\[ m = 0 \Rightarrow \sigma_0 = \left[\begin{matrix}1\end{matrix}\right] \] 
+
+\[ m = 1 \Rightarrow \sigma_1 = 
+\left[\begin{matrix} \alpha^{} &  \beta^{}\\-  \overline{\beta}^{} &  \overline{\alpha}^{}\end{matrix}\right]
+\]%
+
+\[%
+    m=2 \Rightarrow \sigma_2 = 
+    \left[\begin{matrix}\alpha^{2} &  \sqrt{2} \alpha \beta &  \beta^{2}\\- \sqrt{2} \alpha
+    \overline{\beta} & \alpha \overline{\alpha} - \beta \overline{\beta} &  \sqrt{2} \beta
+    \overline{\alpha}\\\overline{\beta}^{2} & - \sqrt{2} \overline{\alpha} \overline{\beta}
+    & \overline{\alpha}^{2}\end{matrix}\right]
+\]%
+
+\[%
+    m=3 \Rightarrow \sigma_3 =
+    \left[\begin{matrix} \alpha^{3} & \sqrt{3} \alpha^{2} \beta^{} & \sqrt{3} \alpha^{}
+    \beta^{2} &  \beta^{3}\\- \sqrt{3} \alpha^{2} \overline{\beta}^{} & - 2 \alpha^{} \beta^{}
+    \overline{\beta}^{} +  \alpha^{2} \overline{\alpha}^{} & 2 \alpha^{} \beta^{} \overline{\alpha}^{}
+    -  \beta^{2} \overline{\beta}^{} & \sqrt{3} \beta^{2} \overline{\alpha}^{}\\\sqrt{3}
+    \alpha^{} \overline{\beta}^{2} & - 2 \alpha^{} \overline{\alpha}^{} \overline{\beta}^{}
+    +  \beta^{} \overline{\beta}^{2} &  \alpha^{} \overline{\alpha}^{2} - 2 \beta^{} \overline{\alpha}^{}
+    \overline{\beta}^{} & \sqrt{3} \beta^{} \overline{\alpha}^{2}\\-  \overline{\beta}^{3}
+    & \sqrt{3} \overline{\alpha}^{} \overline{\beta}^{2} & - \sqrt{3} \overline{\alpha}^{2}
+    \overline{\beta}^{} &  \overline{\alpha}^{3}\end{matrix}\right].
+\]%
+Interestingly, every $\sigma_m$ is irreducible. We demonstrate this using the concept of the Lie algebra, whose details are out of the scope of this talk. For now at least, we have:
+
+\begin{theorem}
+    $\sigma_m$ is irreducible for each $m\geq 0$.
+\end{theorem}
+Also, we have
+\begin{Theorem}{Dual}
+    \begin{equation}
+        \widehat{\mathcal{SU}(2)} = \left\{ [\sigma_m] : m \geq 0 \right\}
+    \end{equation}
+\end{Theorem}
+Note that $[\cdot]$ denotes the equivalence class of $\sigma_m$. It turns out that $\sigma_m$ is equivalent to its contragradient $\overline{\sigma_m}$.
+\begin{equation}
+    {\sigma^{*}_m}^{(g)} = \sigma(g^{-1})^{T} = \overline{\sigma_m(g)}.
+\end{equation}
+Now, let's examine the Schur orthogonality relation.
+\begin{theorem}
+    Let $\sigma$ and $\sigma'$ be irreducible representations of $G$, $\mathcal{E}_{\sigma}$ and $\mathcal{E}_{\sigma'}$ are the linear span of the matrix elements of $\sigma$ and $\sigma'$, respectively.
+    \begin{enumerate}
+        \item If $[\sigma] \neq [\sigma']$, then $\mathcal{E}_{\sigma} \perp \mathcal{E}_{\sigma'}$.
+        \item If $\{ e_j \}$ is any orthonormal basis for $\mathcal{H}_{\sigma}$ and $\sigma_{ij} = \langle \sigma e_j, e_i \rangle$, then
+            \[
+                \left\{ \sqrt{d_{\sigma}}\sigma_{ij} : i,j=1,\ldots, d_{\sigma} \right\}
+            \]
+            is an orthonormal basis for $\mathcal{E}_{\sigma}$.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    See Folland - Abstract Harmonic Analysis pg.139.
+\end{proof}
+Finally, we come to the major result of representations of compact groups.
+\begin{Theorem}{Peter-Weyl Theorem}
+    Let $G$  be a compact group, then 
+    \begin{equation}
+        L^{2}(G) = \bigoplus^{}_{[\sigma]\in \widehat{G}} \mathcal{E}_{\sigma}
+    \end{equation}
+    and if $\sigma_{ij}=\langle \sigma e_j, e_i \rangle$, then 
+    \begin{equation}
+        \left\{ \sqrt{d_{\sigma}}\sigma_{ij} : i,j=1,\ldots,d_{\sigma}, [\sigma] \in \widehat{G} \right\}
+    \end{equation}
+    is an orthonormal basis for $L^{2}(G)$.
+\end{Theorem}
+According to the Peter-Weyl theorem, if $f \in L^{2}(G)$, then
+\begin{equation}
+    f = \sum_{}^{[\sigma]\in \widehat{G}} \sum_{i,j=1}^{d_{\sigma}} a^{\sigma}_{ij} \sigma_{ij},
+\end{equation}
+and
+\begin{equation}
+    a^{\sigma}_{ij} = d_{\sigma} \int_{G} f(\chi) \overline{\sigma_{ij}(\chi)} \ d\chi.
+\end{equation}
+The drawback is we have an orthonormal basis for each $\mathcal{H}_{\sigma}$. If $f \in L^{1}(G)$, $[\sigma]\in \widehat{G}$, and $\sigma$ is the representative of class $[\sigma]$, we define the Fourier transform of  $f$  at $\sigma$  to be
+\begin{equation}
+    \widehat{f}(\sigma) (?) = \int_{G} f(\chi) \sigma(\chi^{-1}) \ d\chi.
+\end{equation}
 \end{document}
 

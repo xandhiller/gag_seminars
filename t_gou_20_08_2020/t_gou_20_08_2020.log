@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.4)  13 SEP 2020 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.4)  13 SEP 2020 22:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -877,25 +877,66 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@env@ii=\count333
 \c@mdf@zref@counter=\count334
 Package zref Info: New property: mdf@pagevalue on input line 895.
-) (/home/alex/Meta/templates/tex/tex_macros.tex
-\c@question=\count335
+) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks38
+\t@pgfplots@tokb=\toks39
+\t@pgfplots@tokc=\toks40
+\pgfplots@tmpa=\dimen304
+\c@pgfplots@coordindex=\count335
+\c@pgfplots@scanlineindex=\count336
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count337
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count338
+\t@pgfplotstable@a=\toks41
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count339
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen305
+\pgfdecoratedremainingdistance=\dimen306
+\pgfdecoratedinputsegmentcompleteddistance=\dimen307
+\pgfdecoratedinputsegmentremainingdistance=\dimen308
+\pgf@decorate@distancetomove=\dimen309
+\pgf@decorate@repeatstate=\count340
+\pgfdecorationsegmentamplitude=\dimen310
+\pgfdecorationsegmentlength=\dimen311
+)
+\tikz@lib@dec@box=\box72
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count341
+\pgfplots@xmin@reg=\dimen312
+\pgfplots@xmax@reg=\dimen313
+\pgfplots@ymin@reg=\dimen314
+\pgfplots@ymax@reg=\dimen315
+\pgfplots@zmin@reg=\dimen316
+\pgfplots@zmax@reg=\dimen317
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+))) (/home/alex/Meta/templates/tex/tex_macros.tex
+\c@question=\count342
 ) (./dtper_article.tex
-\c@assert=\count336
-\c@define=\count337
+\c@assert=\count343
+\c@define=\count344
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-\Gm@cnth=\count338
-\Gm@cntv=\count339
-\c@Gm@tempcnt=\count340
-\Gm@bindingoffset=\dimen304
-\Gm@wd@mp=\dimen305
-\Gm@odd@mp=\dimen306
-\Gm@even@mp=\dimen307
-\Gm@layoutwidth=\dimen308
-\Gm@layoutheight=\dimen309
-\Gm@layouthoffset=\dimen310
-\Gm@layoutvoffset=\dimen311
-\Gm@dimlist=\toks38
+\Gm@cnth=\count345
+\Gm@cntv=\count346
+\c@Gm@tempcnt=\count347
+\Gm@bindingoffset=\dimen318
+\Gm@wd@mp=\dimen319
+\Gm@odd@mp=\dimen320
+\Gm@even@mp=\dimen321
+\Gm@layoutwidth=\dimen322
+\Gm@layoutheight=\dimen323
+\Gm@layouthoffset=\dimen324
+\Gm@layoutvoffset=\dimen325
+\Gm@dimlist=\toks42
 ) (./t_gou_20_08_2020.aux)
 \openout1 = `t_gou_20_08_2020.aux'.
 
@@ -913,20 +954,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
-\c@lstlisting=\count341
+\c@lstlisting=\count348
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count342
-\scratchdimen=\dimen312
-\scratchbox=\box72
-\nofMPsegments=\count343
-\nofMParguments=\count344
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count345
-\MPscratchDim=\dimen313
-\MPnumerator=\count346
-\makeMPintoPDFobject=\count347
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count349
+\scratchdimen=\dimen326
+\scratchbox=\box73
+\nofMPsegments=\count350
+\nofMParguments=\count351
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen327
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
+\everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -939,7 +980,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box73
+\AtBeginShipoutBox=\box74
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
@@ -953,7 +994,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count348
+\c@section@level=\count355
 )
 LaTeX Info: Redefining \ref on input line 30.
 LaTeX Info: Redefining \pageref on input line 30.
@@ -962,6 +1003,10 @@ LaTeX Info: Redefining \nameref on input line 30.
 \@outlinefile=\write4
 \openout4 = `t_gou_20_08_2020.out'.
 
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into your preamble.
+ on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1131,29 +1176,33 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
+[7] [8] [9]
+Package mdframed Info: Not enough space on this page on input line 664.
+ [10]
+Package mdframed Info: Not enough space on this page on input line 664.
+ [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 677.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 677.
  (./t_gou_20_08_2020.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 677.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 677.
 Package rerunfilecheck Info: File `t_gou_20_08_2020.out' has not changed.
 (rerunfilecheck)             Checksum: 90A55074DC470DBE4E7B0B98539D5CAC;100.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 677.
  ) 
 Here is how much of TeX's memory you used:
- 41671 strings out of 494553
- 896631 string characters out of 6177319
- 1108737 words of memory out of 5000000
- 44771 multiletter control sequences out of 15000+600000
+ 51933 strings out of 494553
+ 1241021 string characters out of 6177319
+ 1583814 words of memory out of 5000000
+ 54879 multiletter control sequences out of 15000+600000
  544673 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 62i,22n,77p,983b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t_gou_20_08_2020.pdf (8 pages, 190883 bytes).
+ 69i,22n,100p,956b,2048s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on t_gou_20_08_2020.pdf (11 pages, 232508 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 65 named destinations out of 1000 (max. 500000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
