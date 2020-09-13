@@ -440,6 +440,58 @@ The surface measure of $S^{3}$ is exactly
     \end{equation}
 \end{proof}
 
+\begin{theorem}
+    If $p,q,r,s \in \mathbb{Z}$ , then 
+    \begin{equation}
+        \int_{S^{3}} z^{p} \overline{z}^{q} w^{r} \overline{w}^{s} \ d\mu(z,w)
+        =
+        \begin{cases}
+                \case 0 &\ \text{if } p \neq q \text{ or } r \neq s \\
+                \case \frac{p! r!}{(p+r+1)!} &\ \text{if } p=q \text{ and } r=s \\
+        \end{cases}
+    \end{equation}
+\end{theorem}
+
+\begin{proof}
+    By Prop ??, 
+    \begin{equation}
+        \int_{S^{3}} z^{p} \overline{z^{q}} w^{r} \overline{w}^{s} \ d\mu(z,w)
+        =
+        \frac{1}{\pi^{2} \Gamma(\frac{p+q+r+s+4}{2})} \int_{\mathbb{C}} z^{p} \overline{z^{q}} e^{-| z |^{2}} \ dz \cdot \int_{\mathbb{C}} w^{r} \overline{w}^{s}  \ dw
+    \end{equation}
+    Let $m=p+q+r+s$. Since $f(z) = 1^{m}f(z)$:
+    \begin{equation}
+        \begin{split}
+            \int_{\mathbb{C}} z^{p} \overline{z^{q}} e^{-| z |^{2}} \ dz 
+            &=
+            \int^{\infty}_{0} \int^{2\pi}_{0} e^{i(p-q)\theta} r^{p+q+1} e^{-r^{2}} \ d\theta \ dr \\
+            &= 
+            \int^{\infty}_{0} r^{p+q+1} e^{-r^{2}}  \ dr \cdot \int^{2\pi}_{0} e^{i(p-q)\theta} \ d\theta
+        \end{split}
+    \end{equation}
+    If $p\neq q$, then the integral with respect to $\theta$ is 0, and if $p=q$, then
+    \begin{equation}
+        \int^{2\pi}_{0} e^{i(p-q)\theta} \ d\theta 
+        =
+        2\pi \frac{1}{2} \Gamma (\frac{2p+2}{2}) 
+        = \pi \Gamma ({p+1}) .
+    \end{equation}
+    Similarly for 
+    \begin{equation}
+        \int w^{p} \overline{w}^{q} e^{-| w |^{2}} \ dw
+        =
+        \begin{cases}
+            \case 0 &\text{if } r\neq s \\
+            \case \pi r! & \text{if } r=s. \\
+        \end{cases}
+    \end{equation}
+    Also, 
+    \begin{equation}
+        \Gamma (\frac{p+q+r+s+4}{2}) = (p+r+1)! 
+    \end{equation}
+    if $p=q$ and $r=s$.
+\end{proof}
+
 
 \end{document}
 
