@@ -487,11 +487,37 @@ The surface measure of $S^{3}$ is exactly
     \end{equation}
     Also, 
     \begin{equation}
-        \Gamma (\frac{p+q+r+s+4}{2}) = (p+r+1)! 
+        \Gamma \left(\frac{p+q+r+s+4}{2}\right) = (p+r+1)! 
     \end{equation}
     if $p=q$ and $r=s$.
 \end{proof}
 
+\begin{theorem}
+    The subspaces $P_m$ are mutually orthogonal in $L^{2}(S^{3})$, and 
+    \begin{equation}
+        \left\{ \sqrt{\frac{(m+1)!}{(m-j)! j!}} z^{m-j}w^{j} \ : \ 0 \leq j \leq m \right\}.
+    \end{equation}
+\end{theorem}
+
+\begin{proof}
+   By the previous theorem ??. 
+\end{proof}
+
+For each $P_m$, we can define the representation $\sigma_m$ acting on it, and we can quickly access the information of $\sigma_m$ by looking at its (trace) characters. Let $A_{\alpha, \sigma} \in \mathbb{T}$, then
+\begin{equation}
+    \sigma_m(A_{\alpha, 0(?)})(z^{m-j}w^{j}) = e^{i(m-zj)\theta}z^{m-j}w^{j}.
+\end{equation}
+Therefore, each orthogonal vector $z^{m-j}w^{j}$ of $P_m$ is an eigenvector of $\sigma_m(A_{\alpha, 0(?)})$. This means we can write
+\begin{equation}
+    \sigma_m(A_{\alpha,0}) =
+    \begin{bmatrix} 
+        e^{im\theta} & 0  & 0  & 0  & 0  \\
+        0 & e^{i(m-2)\theta} &0 &0  &0  \\
+        0  &0 & \ddots &0  &0  \\
+        0  &0 &0  & e^{-i(m-2)\theta} &0  \\
+        0  &0  &0 &0    & e^{-im\theta} \\		
+    \end{bmatrix}
+\end{equation}
 
 \end{document}
 

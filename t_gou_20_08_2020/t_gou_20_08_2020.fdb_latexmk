@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1599994185 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599994185
+["pdflatex"] 1599995197 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599995197
   "/dev/null" 1598216093 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/alex/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1578140711 797357 10b20f8ae6556d590e9dbcaa14a5be9c ""
   "/home/alex/Meta/templates/tex/tex_macros.tex" 1595979055 1852 598c78a0411737d36b420cd455d4e620 ""
@@ -217,9 +217,9 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1574088520 35594 9aef19174c178978f61d14961262af5d ""
   "dtper_article.tex" 1599471882 4864 2acceb4d5106bd20ed47c291b3de308d ""
-  "t_gou_20_08_2020.aux" 1599994175 972 f11cd3a9e448ff041d7f3dfcc48a0547 "pdflatex"
-  "t_gou_20_08_2020.out" 1599994175 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
-  "t_gou_20_08_2020.tex" 1599994184 17494 293027ead11a0290c5165b42b1d7e35d ""
+  "t_gou_20_08_2020.aux" 1599995157 972 f11cd3a9e448ff041d7f3dfcc48a0547 "pdflatex"
+  "t_gou_20_08_2020.out" 1599995157 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
+  "t_gou_20_08_2020.tex" 1599995197 18568 b08e6bb370d667c0d0d1130065f57878 ""
   (generated)
   "t_gou_20_08_2020.aux"
   "t_gou_20_08_2020.out"
