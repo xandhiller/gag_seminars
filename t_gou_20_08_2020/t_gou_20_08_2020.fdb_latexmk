@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1599973748 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599973748
+["pdflatex"] 1599976344 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1599976344
   "/dev/null" 1598216093 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/alex/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1578140711 797357 10b20f8ae6556d590e9dbcaa14a5be9c ""
   "/home/alex/Meta/templates/tex/tex_macros.tex" 1595979055 1852 598c78a0411737d36b420cd455d4e620 ""
@@ -40,6 +40,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -215,11 +216,11 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1574088520 35594 9aef19174c178978f61d14961262af5d ""
   "dtper_article.tex" 1599471882 4864 2acceb4d5106bd20ed47c291b3de308d ""
-  "t_gou_20_08_2020.aux" 1599973732 972 f11cd3a9e448ff041d7f3dfcc48a0547 "pdflatex"
-  "t_gou_20_08_2020.out" 1599973732 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
-  "t_gou_20_08_2020.tex" 1599973746 12365 f6ff639891e04ae9ab1d701542864a96 ""
+  "t_gou_20_08_2020.aux" 1599976054 972 f11cd3a9e448ff041d7f3dfcc48a0547 "pdflatex"
+  "t_gou_20_08_2020.out" 1599976054 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
+  "t_gou_20_08_2020.tex" 1599976343 14790 8f71a7855b34cdd229569ca07be87479 ""
   (generated)
+  "t_gou_20_08_2020.pdf"
+  "t_gou_20_08_2020.out"
   "t_gou_20_08_2020.log"
   "t_gou_20_08_2020.aux"
-  "t_gou_20_08_2020.out"
-  "t_gou_20_08_2020.pdf"

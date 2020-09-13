@@ -356,6 +356,68 @@ we define the regular representation of $\sigma(A_{\alpha,\beta})$ on $f$:
     \end{split}
 \end{equation}
 
+\begin{theorem}
+    $P_m$ is invariant under $\sigma(A_{\alpha,\beta})$.
+\end{theorem}
+
+\begin{proof}
+    Suppose monomials $z^{m-j}w^{j} \in P_m$ then 
+    \begin{equation}
+        f(\overline{\alpha}z - \beta w, \overline{\beta}z + \alpha w)
+        =
+        (\overline{\alpha}z - \beta w)^{m-j} (\overline{\beta}z + \alpha w)^{j} \in P_m.
+    \end{equation}
+    So, $P_m$ is invariant under $\sigma$.
+\end{proof}
+Now, we want to define an inner product, i.e.
+\begin{equation}
+    \langle f,g \rangle = \int_{S^{3}} f \overline{g} \ d\mu
+\end{equation}
+where $\mu(S^{3})=1$ is the surface measure of $S^{3}$ which is normalised to 1.
+
+So, we'll show monomials $z^{m-j}w^{j}$ are orthogonal in $P$ with respect to this inner product. To achieve this, we use polar coordinates.
+
+Suppose $Z = (z,w) \in C^{2}$ and $Z = r \tilde{z}$, where $\tilde{z} \in S^{3}$, and $r = | z | = \sqrt{| z |^{2} + | w |^{2}}$. We define Lebesgue measure on $\mathbb{C}^{2}$ as 
+\begin{equation}
+    \begin{split}
+        dz &= dz \ dw \\
+           &= d_a \ d_b \ d_c \ d_{d} \\
+           &= r^{3} \ dr \ d\tilde{\mu}(\tilde{z}) \ : \ \text{(un-normalised)} \\
+           &= 2 \pi^{2} r^{3} \ dr \ d\mu (\tilde{z}) \ : \ \text{(normalised)}
+    \end{split}.
+\end{equation}
+To see this, we have $\varphi_1, \varphi_2 \in [0, \pi]$, $\theta \in [0, 2\pi)$. 
+\begin{equation}
+    \begin{split}
+        a &= r \cos\left(\varphi_1\right) \\
+        b &= r \sin\left(\varphi_1\right) \sin\left(\varphi_2\right) \\
+        c &= r \sin\left(\varphi_1\right) \sin\left(\varphi_2\right) \cos\left(\theta\right) \\
+        d &= r \sin\left(\varphi_1\right) \sin\left(\varphi_2\right) \sin\left(\theta\right) .\\
+    \end{split}
+\end{equation}
+The Jacobian matrix is then
+\begin{equation}
+    J = 
+    \begin{bmatrix} 
+        \frac{\partial a}{\partial r} & \ldots & * \\
+		\vdots & \ddots & \vdots \\
+		* & \ldots & \frac{\partial d}{\partial \theta} \\		
+    \end{bmatrix}
+\end{equation}
+giving
+\begin{equation}
+    \det\left( J \right) = r^{3} \sin^{2}\left(\varphi_1\right) \sin\left(\varphi_2\right).
+\end{equation}
+The surface measure of $S^{3}$ is exactly
+\begin{equation}
+    \begin{split}
+        \mu(S^{3}) &= \int^{2\pi}_{0} \int^{\pi}_{0} \int^{\pi}_{0}
+        \sin^{2}\left(\varphi_1\right) \sin\left(\varphi_2\right)
+        d\varphi_1 \ d\varphi_2 \ d\theta
+        (?) \\
+                   &= 2 \pi^{2}
+    \end{split}
+\end{equation}
 
 
 \end{document}
