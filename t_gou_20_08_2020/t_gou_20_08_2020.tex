@@ -144,7 +144,7 @@ suppose
         \gamma & \eta \\
     \end{pmatrix} \in \mathcal{U}(2)
 \end{equation}
-then, $| \alpha |^{2} + | \beta |^{2} = | \gamma |^{2} + | \eta |^{2} = 1$ and $\alpha \overline{\gamma} + \beta \overline{eta} = 0$. So,
+then, $| \alpha |^{2} + | \beta |^{2} = | \gamma |^{2} + | \eta |^{2} = 1$ and $\alpha \overline{\gamma} + \beta \overline{\eta} = 0$. So,
 \begin{equation}
     \begin{pmatrix}
         \alpha \\ \beta \\
@@ -183,6 +183,180 @@ If $A \in \mathcal{SU}(2)$, then
     \end{pmatrix}
     \in \mathcal{SU}(2).
 \end{equation}
+\begin{equation}
+    \mathcal{SU}(2) = 
+    \left\{ 
+        \begin{pmatrix}
+            \alpha & \beta \\
+            -\overline{\beta} & \overline{\alpha}
+        \end{pmatrix}
+        :
+        | \alpha |^{2} + | \beta |^{2} = 1
+    \right\}
+\end{equation}
+where $\alpha, \beta \in \mathbb{C}$. If $\alpha = a+ib$ and $\beta = c+id$ then
+\begin{equation}
+    \begin{split}
+        | \alpha |^{2} + | \beta |^{2} &= 1 \\
+        \left| \sqrt{a^{2} + b^{2}} \right|^{2} + \left| \sqrt{c^{2} + d^{2}} \right|^{2} &= 1 \\
+        {a^{2} + b^{2}} + {c^{2} + d^{2}} &= 1 \\
+    \end{split}
+\end{equation}
+and so $\mathcal{SU}(2) \cong S^{3}$, the $3-$sphere. $\mathbb{T} \subset \mathcal{SU}(2)$
+\begin{equation}
+    \mathbb{T} = \left\{ 
+        \begin{pmatrix}
+            \alpha & 0 \\
+            0 & \overline{\alpha}
+        \end{pmatrix}
+        :
+        | \alpha | = 1
+    \right\}
+\end{equation}
+
+\begin{theorem}
+    Given $A \in \mathcal{SU}(2)$, $\exists V \in \mathcal{SU}(2)$, such that 
+    \begin{equation}
+        V A V^{-1} = T
+    \end{equation} 
+    for some $T \in \mathbb{T}$.
+\end{theorem}
+
+\begin{proof}
+    If $A \in \mathcal{U}(2)$, $A$ is normal, then by the \textit{spectral theorem}, $\exists V \in \mathcal{U}(2)$ such that
+    \begin{equation}
+        VA v^{-1} = 
+        \begin{pmatrix}
+            \alpha & 0 \\
+            0 & \beta \\
+        \end{pmatrix}
+    \end{equation}
+    with $| \alpha | = | \beta | = 1$.
+\end{proof}
+
+If $A \in \mathcal{SU}(2)$, then $\beta = \overline{\alpha}$ . So, $V \in \mathcal{U}(2)$ , $A \in \mathcal{SU}(2)$, we have
+\[
+    VAV^{-1} = 
+    \begin{pmatrix}
+        \alpha & 0 \\
+        0 & \overline{\alpha}
+    \end{pmatrix}.
+\]
+To make $V$ special unitary, let $\tilde{V} = \det\left( V \right)^{1/2}V$ such that $\det\left( \tilde{V} \right) = 1$ and we have $\tilde{V}A\tilde{V}^{-1}=T$.
+
+$\mathcal{SU}(2)$ is a compact, connected, Lie group, (?) we have a theorem to generalise this conjugation relation.
+
+\begin{theorem}
+    If $G$ is a compact, connected, Lie group, $\mathbb{T}$ is its maximal torus, then for $\chi \in G$, $\exists g \in G$, such that
+    \begin{equation}
+        g \chi g^{-1} = t \quad : \quad t \in \mathbb{T}.
+    \end{equation}
+\end{theorem}
+
+\begin{theorem}
+    (proposition?) Define $O_{x} = \{ g \chi g^{-1} : g \in G \}$, then for $\mathcal{SU}(2)$, every $O_{x}$ intersects $\mathbb{T}$ at exactly two points.
+\end{theorem}
+
+\begin{proof}
+    We have $g \chi g^{-1} = t$ , let
+    \[
+        g_1 = 
+        \begin{pmatrix}
+            0 & 1 \\
+            -1 & 0 \\
+        \end{pmatrix}
+        \Rightarrow
+        g^{-1} = 
+        \begin{pmatrix}
+            0 & -1 \\
+            1 & 0 \\
+        \end{pmatrix}
+    \]
+    so 
+    \[
+        \begin{split}
+            (g_1 g) \chi (g_1 g)^{-1} &= 
+            \begin{pmatrix}
+                0 & 1 \\
+                -1 & 0 \\
+            \end{pmatrix}
+            \begin{pmatrix}
+                e^{i\theta} & 0 \\
+                0 & e^{-i\theta} \\
+            \end{pmatrix}
+            \begin{pmatrix}
+                0 & -1 \\
+                1 & 0 \\
+            \end{pmatrix} \\
+                                      &=
+            \begin{pmatrix}
+                e^{-i\theta} & 0 \\
+                0 & e^{i\theta}
+            \end{pmatrix}
+        \end{split}
+    \]
+\end{proof}
+
+Now, we describe the irreducible representations of $\mathcal{SU}(2)$. $\mathcal{SU}(2)$ naturally acts on $\mathbb{C}^{2}$ ($\sigma$ is just the identity mapping) i.e.
+\begin{equation}
+    \begin{pmatrix}
+        \alpha & \beta \\
+        -\overline{\beta} & \overline{\alpha} \\
+    \end{pmatrix}
+    \begin{pmatrix}
+        z \\ w
+    \end{pmatrix} 
+    = 
+    \begin{pmatrix}
+        \alpha z + \beta w \\
+        - \overline{\beta}z + \overline{\alpha}w
+    \end{pmatrix}
+\end{equation}
+
+We are interested in $\mathcal{SU}(2)$ acting on the vector spaces which are built out of $\mathbb{C}^{2}$, e.g.
+\begin{equation}
+    L^{2}(\mathcal{SU}(2)) \cong L^{2}(S^{3})
+\end{equation}
+made up of functions
+\begin{equation}
+    f : \mathbb{C}^{2} \rightarrow \mathbb{C}
+\end{equation}
+and let $P$ be the space of all polynomials with two complex variables, i.e. $f \in P$ such that
+\begin{equation}
+    f(z,w) = \sum_{j,k}^{} a_{jk} z^{j} w^{k}
+\end{equation}
+and 
+\begin{equation}
+    P \subset L^{2}(S^{3}) 
+\end{equation}
+where both spaces are infinite dimensional. But $\mathcal{SU}(2)$ is compact, so $d_{\sigma} < \infty$. This means we want to find subspaces of $P$ which are:
+\begin{itemize}
+    \item finite dimensional
+    \item invariant under the action of $\mathcal{SU}(2)$
+\end{itemize}
+
+Thus, we pick $P_m$ , the space of homogeneous polynomials of degree $m$. For $f \in P_m$ 
+\begin{equation}
+    f(z,w) = \sum_{j=0}^{m} a_j z^{m-j} w^{j}
+\end{equation}
+and let 
+\begin{equation}
+    A_{\alpha, \beta} := 
+    \begin{pmatrix}
+        \alpha & \beta \\
+        -\overline{\beta} & \overline{\alpha}
+    \end{pmatrix},
+\end{equation}
+we define the regular representation of $\sigma(A_{\alpha,\beta})$ on $f$:
+\begin{equation}
+    \begin{split}
+        \sigma(A_{\alpha, \beta})f(z,w) &= f(A_{\alpha,\beta}(z,w))\\
+                                        &= f(\overline{\alpha} z - \beta w, 
+                                             \overline{\beta}z + \alpha w)
+    \end{split}
+\end{equation}
+
+
 
 \end{document}
 
