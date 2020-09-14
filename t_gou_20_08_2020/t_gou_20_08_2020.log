@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.4)  13 SEP 2020 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.4)  14 SEP 2020 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -918,16 +918,14 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 File: tikzlibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
-))) (/home/alex/Meta/templates/tex/tex_macros.tex
-\c@question=\count342
-) (./dtper_article.tex
-\c@assert=\count343
-\c@define=\count344
+))) (./dtper_article.tex
+\c@assert=\count342
+\c@define=\count343
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-\Gm@cnth=\count345
-\Gm@cntv=\count346
-\c@Gm@tempcnt=\count347
+\Gm@cnth=\count344
+\Gm@cntv=\count345
+\c@Gm@tempcnt=\count346
 \Gm@bindingoffset=\dimen318
 \Gm@wd@mp=\dimen319
 \Gm@odd@mp=\dimen320
@@ -940,33 +938,33 @@ Package: geometry 2018/04/16 v5.8 Page Geometry
 ) (./t_gou_20_08_2020.aux)
 \openout1 = `t_gou_20_08_2020.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-\c@lstlisting=\count348
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+\c@lstlisting=\count347
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count349
+\scratchcounter=\count348
 \scratchdimen=\dimen326
 \scratchbox=\box73
-\nofMPsegments=\count350
-\nofMParguments=\count351
+\nofMPsegments=\count349
+\nofMParguments=\count350
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count352
+\MPscratchCnt=\count351
 \MPscratchDim=\dimen327
-\MPnumerator=\count353
-\makeMPintoPDFobject=\count354
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
 \everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -988,17 +986,17 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count355
+\c@section@level=\count354
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  (./t_gou_20_08_2020.out) (./t_gou_20_08_2020.out)
 \@outlinefile=\write4
 \openout4 = `t_gou_20_08_2020.out'.
@@ -1006,7 +1004,7 @@ LaTeX Info: Redefining \nameref on input line 30.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into your preamble.
- on input line 30.
+ on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1042,22 +1040,22 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 33.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
-./t_gou_20_08_2020.tex:110: Undefined control sequence.
+./t_gou_20_08_2020.tex:109: Undefined control sequence.
 <argument> ...\delta _{mn} = \begin {cases} \case 
                                                   1, \ m=n \\ \case 0, \ m\n...
-l.110     \end{split}
+l.109     \end{split}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1065,10 +1063,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./t_gou_20_08_2020.tex:110: Undefined control sequence.
+./t_gou_20_08_2020.tex:109: Undefined control sequence.
 <argument> ...gin {cases} \case 1, \ m=n \\ \case 
                                                   0, \ m\neq n \\ \end {case...
-l.110     \end{split}
+l.109     \end{split}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1076,10 +1074,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./t_gou_20_08_2020.tex:110: Undefined control sequence.
+./t_gou_20_08_2020.tex:109: Undefined control sequence.
 <argument> ...\delta _{mn} = \begin {cases} \case 
                                                   1, \ m=n \\ \case 0, \ m\n...
-l.110     \end{split}
+l.109     \end{split}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1087,10 +1085,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./t_gou_20_08_2020.tex:110: Undefined control sequence.
+./t_gou_20_08_2020.tex:109: Undefined control sequence.
 <argument> ...gin {cases} \case 1, \ m=n \\ \case 
                                                   0, \ m\neq n \\ \end {case...
-l.110     \end{split}
+l.109     \end{split}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1100,14 +1098,14 @@ and I'll forget about whatever was undefined.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 127.
+(hyperref)                removing `math shift' on input line 126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 127.
+(hyperref)                removing `math shift' on input line 126.
 
-./t_gou_20_08_2020.tex:136: Undefined control sequence.
-l.136         \case
+./t_gou_20_08_2020.tex:135: Undefined control sequence.
+l.135         \case
                     \det\left( AB \right) = \det\left( A \right) \det\left( ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1115,8 +1113,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./t_gou_20_08_2020.tex:137: Undefined control sequence.
-l.137         \case
+./t_gou_20_08_2020.tex:136: Undefined control sequence.
+l.136         \case
                     \det\left( I \right) = \det\left( A A^{-1} \right) = \de...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1125,23 +1123,492 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [2]
-Package mdframed Info: Not enough space on this page on input line 223.
+Package mdframed Info: Not enough space on this page on input line 222.
  [3]
-Package mdframed Info: Not enough space on this page on input line 223.
- [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 334.
+Package mdframed Info: Not enough space on this page on input line 222.
+
+./t_gou_20_08_2020.tex:234: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.234 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./t_gou_20_08_2020.tex:297: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.297 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 333.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 334.
- [5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 333.
+
+./t_gou_20_08_2020.tex:370: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.370 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[5]
+./t_gou_20_08_2020.tex:440: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.440 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 440.
+
+
+Overfull \vbox (3.95665pt too high) detected at line 440
+ []
+
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 441.
- [6]
-./t_gou_20_08_2020.tex:449: Undefined control sequence.
-l.449                 \case
+(mdframed)              on input line 440.
+
+Overfull \vbox (4.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (5.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (6.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (7.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (8.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (9.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (10.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (11.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (12.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (13.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (14.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (15.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (16.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (17.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (18.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (19.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (20.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (21.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (22.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (23.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (24.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (25.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (26.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (27.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (28.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (29.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (30.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (31.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (32.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (33.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (34.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (35.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (36.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (37.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (38.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (39.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (40.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (41.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (42.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (43.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (44.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (45.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (46.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (47.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (48.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (49.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (50.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (51.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (52.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (53.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (54.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (55.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (56.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (57.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (58.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (59.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (60.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (61.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (62.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (63.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (64.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (65.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (66.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (67.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (68.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (69.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (70.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (71.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (72.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (73.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (74.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (75.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (76.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (77.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (78.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (79.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (80.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (81.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (82.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (83.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (84.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (85.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (86.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (87.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (88.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (89.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (90.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (91.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (92.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (93.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (94.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (95.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (96.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (97.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (98.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (99.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (100.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (101.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (102.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (103.95665pt too high) detected at line 440
+ []
+
+
+Overfull \vbox (104.95665pt too high) detected at line 440
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 440.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 440.
+[6]
+./t_gou_20_08_2020.tex:448: Undefined control sequence.
+l.448                 \case
                             0 &\ \text{if } p \neq q \text{ or } r \neq s \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1149,9 +1616,18 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./t_gou_20_08_2020.tex:450: Undefined control sequence.
-l.450                 \case
+./t_gou_20_08_2020.tex:449: Undefined control sequence.
+l.449                 \case
                             \frac{p! r!}{(p+r+1)!} &\ \text{if } p=q \text{ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./t_gou_20_08_2020.tex:483: Undefined control sequence.
+l.483             \case
+                        0 &\text{if } r\neq s \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1160,15 +1636,6 @@ and I'll forget about whatever was undefined.
 
 ./t_gou_20_08_2020.tex:484: Undefined control sequence.
 l.484             \case
-                        0 &\text{if } r\neq s \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./t_gou_20_08_2020.tex:485: Undefined control sequence.
-l.485             \case
                         \pi r! & \text{if } r=s. \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1176,33 +1643,499 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[7] [8] [9]
-Package mdframed Info: Not enough space on this page on input line 664.
- [10]
-Package mdframed Info: Not enough space on this page on input line 664.
- [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 677.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 677.
+./t_gou_20_08_2020.tex:492: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.492 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (7.34358pt too high) detected at line 499
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 499.
+
+Overfull \vbox (8.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (9.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (10.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (11.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (12.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (13.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (14.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (15.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (16.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (17.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (18.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (19.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (20.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (21.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (22.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (23.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (24.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (25.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (26.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (27.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (28.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (29.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (30.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (31.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (32.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (33.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (34.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (35.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (36.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (37.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (38.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (39.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (40.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (41.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (42.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (43.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (44.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (45.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (46.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (47.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (48.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (49.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (50.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (51.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (52.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (53.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (54.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (55.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (56.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (57.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (58.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (59.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (60.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (61.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (62.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (63.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (64.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (65.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (66.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (67.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (68.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (69.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (70.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (71.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (72.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (73.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (74.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (75.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (76.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (77.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (78.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (79.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (80.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (81.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (82.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (83.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (84.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (85.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (86.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (87.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (88.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (89.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (90.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (91.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (92.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (93.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (94.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (95.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (96.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (97.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (98.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (99.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (100.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (101.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (102.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (103.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (104.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (105.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (106.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (107.34358pt too high) detected at line 499
+ []
+
+
+Overfull \vbox (108.34358pt too high) detected at line 499
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 499.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 499.
+[7]
+./t_gou_20_08_2020.tex:503: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.503 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8] [9]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 648.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 648.
+[10]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 648.
+
+./t_gou_20_08_2020.tex:651: Undefined control sequence.
+\endproof ->\QED 
+                 \end {mdframed}
+l.651 \end{proof}
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 676.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 676.
  (./t_gou_20_08_2020.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 677.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 677.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 676.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 676.
 Package rerunfilecheck Info: File `t_gou_20_08_2020.out' has not changed.
 (rerunfilecheck)             Checksum: 90A55074DC470DBE4E7B0B98539D5CAC;100.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 677.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 676.
  ) 
 Here is how much of TeX's memory you used:
- 51933 strings out of 494553
- 1241021 string characters out of 6177319
- 1583814 words of memory out of 5000000
- 54879 multiletter control sequences out of 15000+600000
+ 51915 strings out of 494553
+ 1240684 string characters out of 6177319
+ 1583382 words of memory out of 5000000
+ 54865 multiletter control sequences out of 15000+600000
  544673 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  69i,22n,100p,956b,2048s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on t_gou_20_08_2020.pdf (11 pages, 232508 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on t_gou_20_08_2020.pdf (11 pages, 224946 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
+ 232 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
  88 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 

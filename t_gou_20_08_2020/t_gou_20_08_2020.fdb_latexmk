@@ -1,8 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1600000353 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1600000353
+["pdflatex"] 1600063865 "t_gou_20_08_2020.tex" "t_gou_20_08_2020.pdf" "t_gou_20_08_2020" 1600063865
   "/dev/null" 1598216093 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/alex/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1578140711 797357 10b20f8ae6556d590e9dbcaa14a5be9c ""
-  "/home/alex/Meta/templates/tex/tex_macros.tex" 1595979055 1852 598c78a0411737d36b420cd455d4e620 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -48,7 +47,6 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1248133631 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1574090978 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -260,12 +258,12 @@
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1574088520 35594 9aef19174c178978f61d14961262af5d ""
-  "dtper_article.tex" 1599471882 4864 2acceb4d5106bd20ed47c291b3de308d ""
-  "t_gou_20_08_2020.aux" 1600000331 1218 d8322b92f3f97dc9661e7e840fe55c60 "pdflatex"
-  "t_gou_20_08_2020.out" 1600000331 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
-  "t_gou_20_08_2020.tex" 1600000351 26070 3031842d2e26641eba34e403c2ad0880 ""
+  "dtper_article.tex" 1600063834 4864 2acceb4d5106bd20ed47c291b3de308d ""
+  "t_gou_20_08_2020.aux" 1600000354 1218 d8322b92f3f97dc9661e7e840fe55c60 "pdflatex"
+  "t_gou_20_08_2020.out" 1600000354 100 90a55074dc470dbe4e7b0b98539d5cac "pdflatex"
+  "t_gou_20_08_2020.tex" 1600063863 26021 d64d784efebf896b3e8c64123833405d ""
   (generated)
   "t_gou_20_08_2020.aux"
-  "t_gou_20_08_2020.out"
   "t_gou_20_08_2020.log"
+  "t_gou_20_08_2020.out"
   "t_gou_20_08_2020.pdf"
