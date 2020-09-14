@@ -1,0 +1,751 @@
+\documentclass{article}
+\usepackage{amsmath}      % Mathematics
+\usepackage{amssymb}      % Mathematics
+\usepackage{listings}     % Listings
+%\usepackage{esint}       % Mathematics (Causing problems with mdframed)
+\usepackage{color}        % Listings
+\usepackage{courier}      % Listings
+\usepackage[oldvoltagedirection]{circuitikz}   % Circuits
+\usepackage{titlesec}     % Section Formatting
+\usepackage{stmaryrd}     % \mapsfrom arrow. 
+\usepackage{mathtools}    % \coloneqq
+\usepackage{svg}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{mdframed}
+\input{tex_macros}
+\input{dtper_article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Alex Hiller}
+\title{Harmonic Analysis of $\mathcal{M}(2)$}
+\date{September 17, 2020}
+% \pagenumbering{gobble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+\begin{center}
+    \textbf{Abstract}
+\end{center}
+We detail the extension of harmonic analysis on compact groups to those which are only locally compact. In particular, we establish and verify the properties of harmonic analysis on the Euclidean motion group in 2 dimensions, $\mathcal{M}(2)$.
+
+\clearpage
+
+Euclid's Elements uses the concepts of \textit{rotation}, \textit{translation} and \textit{reflection} to prove many theorems about two-dimensional geometry \cite{euclids_elements}. We develop here the Euclidean motion groups that make use of {rotation} and {translation} but \textit{not} reflection. \par
+It is worth noting that within the literature $\mathcal{M}(n)$ often also referred to as $\mathcal{SE}(n)$ -- the difference seems to come from whether the paper is about engineering or mathematics. $\mathcal{M}(n)$ appears to be the mathematician's notation and $\mathcal{SE}(n)$ is more common amongst engineering authors.
+\section{Construction of $\mathcal{M}(n)$} 
+\begin{define}
+    We denote the $n$-dimensional Euclidean motion group as $\mathcal{M}(n)$. This group can be generated as a semidirect product of $(\mathbb{R}^{n},+)$ and $(\mathcal{SO}(n), \times)$, i.e. \[\mathcal{M}(n) = \mathbb{R}^{n} \rtimes \mathcal{SO}(n).\] We denote an element of $\mathcal{M}(n)$ as an ordered pair $(A, x)$ where $A$ is an $n \times n$ matrix from $\mathcal{SO}(n)$ and $x$ is an $n \times 1$ vector from $\mathbb{R}^{n}$. Its associative law is denoted by $\cdot$ and takes the form: \[ (A,x)\cdot (B,y) = (AB, x+Ay) .\]
+\end{define}
+\begin{theorem}
+    $\mathcal{M}(n)$ is a group. 
+\end{theorem}
+
+\begin{proof}
+    We need an identity (1), inverses (2) and closure (3). \par
+\begin{enumerate}
+    \item The identity of $\mathcal{M}(n)$ is 
+    \[ 
+        \left( 
+            \begin{bmatrix} 1 & \ldots & 0 \\
+                \vdots & \ddots & \vdots \\
+                0 & \ldots & 1 \\
+            \end{bmatrix} ,
+            \begin{bmatrix}0 \\ \vdots \\ 0 \\ \end{bmatrix}\right)
+            = 
+            \left(I, \mathbf{0} \right) ,
+    \] 
+    $I \in \mathcal{SO}(n)$ and $\mathbf{0} \in \mathbb{R}^{n}$, so $(I, \mathbf{0}) \in \mathcal{M}(n)$. \par
+    \item The inverse of any $(A,x)$ can be written as
+        \[%
+            (A,x)^{-1} = (A^{-1}, -A^{-1}x) .
+        \]%
+        So, we need only show that each $x \in \mathbb{R}^{n}$ and $A \in \mathcal{SO}(n)$ has an inverse. This follows from the fact that both $\mathbb{R}^{n}$ and $\mathcal{SO}(n)$ are already groups. \par
+    \item For any two elements in $\mathcal{M}(n)$, $(A,x)$ and $(B,y)$, we must show that their resulting combination, $(AB,x+Ay)$ is also in $\mathcal{M}(n)$. This reduces once again down to a problem in the individual subgroups, we must show $x+Ay \in \mathbb{R}^{n}$ and $AB \in \mathcal{SO}(n)$. $AB$ belonging to $\mathcal{SO}(n)$ follows from $\mathcal{SO}(n)$ being a group. $x+Ay$ is $x$ in combination to an orthogonally transformed vector, $Ay$, which we consider rotated. Any rotated vector in $\mathbb{R}^{n}$ is still contained within the group $(\mathbb{R}^{n},+)$, it follows that $x+Ay$ is in $\mathbb{R}^{n}$. \end{enumerate}
+\end{proof}
+
+\section{Representations} 
+
+\begin{Define}{Representation}
+    A representation $\rho$ is a function which maps elements of a group $G$ to operators on a vector space $\mathcal{GL}(V)$. \[ \rho : G \rightarrow \mathcal{GL}(V) .\]
+    It is also an algebraic homomorphism. 
+\end{Define}
+After we are in a vector space we can begin to do analysis and even differential equations on the group.\par
+
+\begin{Define}{Equivalent representations}
+    If we have two representations
+    \[%
+        \rho : G \rightarrow \mathcal{GL}(V) 
+        \qquad
+        \eta : G \rightarrow \mathcal{GL}(W)
+    \]%
+    and there exists $\varphi : V \rightarrow W$ such that 
+    \[%
+        \varphi^{-1} \rho(g) \varphi = \eta(g)
+    \]%
+    then we say $\rho$ and $\eta$ are equivalent representations.
+\end{Define}
+
+\begin{Define}{Sub-representations}
+    Let $\rho : G \rightarrow \mathcal{GL}(v)$, $V$ be a vector space, $S \subseteq V$, and the set of operators produced by $\rho$ on $G$ by $\rho_{g}$. If 
+    \[%
+        \rho^{'}_{g}(S) \subseteq S
+    \]%
+    then we say $\rho'$ is a sub-representation of $\rho$.
+\end{Define}
+
+\begin{Define}{Irreducible representation}
+    A representation is irreducible if its only subrepresentations are where $S=0$ or $S=V$.
+\end{Define}
+
+\begin{Remark}{Representations as Operators}
+    
+\end{Remark}
+
+\begin{Remark}{Some notes on LCA groups, Peter-Weyl theorem}
+
+    Ending point: for a simple example please see Maschke's theorem for $S_{n}$.
+\end{Remark}
+
+
+\section{Induced Representations} 
+\label{sec:induced_representations}
+Frobenius originally worked on induced representations for finite groups, though the technique was generalised to continuous groups by Mackey. This technique is used here to take a subgroup $H$ whose representations we do know, and \textit{induce} them onto the group $G$ where $H < G$. 
+
+We will later use induced representations to generate the representations of the group of two-dimensional Euclidean motions ($\mathcal{M}(2)$) in Chapter 7. The requirement of using induced representations on $\mathcal{M}(2)$ comes from the fact that it is not compact (only locally compact) and non-commutative (because of matrix multiplication). 
+
+Let $G$ be a locally compact group, $H$ a subgroup, and $\xi$ is a unitary representation of $H$ on $\mathcal{H}_{\xi}$. We wish to create an induced representation $\sigma(g)$ by taking $\xi$ and inducing it onto $G$, or written formally 
+\[ 
+    \sigma = \xi \uparrow^{G}_{H}  
+.\] 
+
+\begin{remark}
+Also note that because $\xi$ is a right regular unitary representation we have the following useful identities
+\[ 
+    \left\langle \xi(h^{-1})f(g), \ \xi(h^{-1})k(g) \right\rangle = \left\langle f(g), k(g) \right\rangle 
+\]
+and in fact
+\[ 
+    \| \xi(h^{-1})f(g) \|_{\mathcal{H}_{\xi}} = \| f(g) \|_{\mathcal{H}_{\xi}} .
+\]
+This last equality utilises the same principle used to prove Theorem 5.5.3.
+\end{remark}
+
+We now define $\mathcal{H}_{\sigma}$ as the set of functions $f: G \rightarrow \mathcal{H}_{\xi}$ which satisfy
+\begin{enumerate}
+    \item For all $h \in H$ and for all $g \in G$ 
+        \[ 
+            f(hg) = \xi(h^{-1})f(g) 
+        \]
+    \item $f \in L^{2}(G/H)$, i.e. $f$ is square integrable in the following sense
+        \[%
+            \int_{G/H} \| f(Hg) \|^{2}_{\mathcal{H}_{\xi}} \ d_{\mu_{L}}(Hg) < \infty.
+        \]%
+\end{enumerate}
+
+\begin{Theorem}{Mackey's Lemma}
+    If $G$ and $H$ are separable then there exists a quasi-invariant measure on $G/H$.\QED
+\end{Theorem}
+
+Although we are always aiming to obtain an invariant measure, that is not always possible, but Mackey tells us that there always exists a quasi-invariant measure. We now define invariant and quasi-invariant measures. 
+
+First suppose we have $E \subseteq G/H$ with associative law $\star$ and an element $g_1 \in G$.
+    
+
+\begin{Define}{Invariant measure}
+    An invariant measure has the property 
+    \[ 
+        \mu(E \star g_1) = \mu(E) 
+    \] 
+    where 
+    \[ 
+        E \star g_1  = \{ e \star g_1 : \ e \in E \} 
+    \]
+\end{Define}
+\begin{Define}{Quasi-invariant measure}
+    Using the same objects in the defintion of an invariant measure, we define a quasi-invariant measure has the property 
+    \[ 
+        \mu(E \star g_1) =0 \iff \mu(E) = 0 .
+    \]
+\end{Define}
+
+\begin{Define}{$\mu \circ g (E)$}
+    \[%
+        \mu \circ g = \mu(E \star g) 
+    \]%
+\end{Define}
+
+If we have a quasi-invariant measure, we know there exists a function that will allow us to convert between the $\mu$ and $\mu \circ g$. The ability to do this comes from the Radon-Nikodym derivative. 
+
+\begin{Theorem}{Radon-Nikodym Theorem}
+    If $\nu$  is absolutely continuous with respect to $\mu$, denoted $\nu \ll \mu$ , it means that 
+    \[%
+        \mu(A) = 0 \Rightarrow \nu(A) = 0 .
+    \]%
+    If this relationship between the measures hold then there exists $f$  such that
+    \[%
+        \nu(A) = \int_{A} f \ d\mu 
+    \]%
+\end{Theorem}
+    
+\begin{define}
+    We now define  $\sigma$  acting on $\mathcal{H}_{\sigma}$  by 
+    \[%
+        \sigma(g)f(x) = f(xg) \left(\frac{d \mu \circ g}{d \mu}(x)\right)^{1/2}
+    \]%
+\end{define}
+
+\begin{define}
+We give $\mathcal{H}_{\sigma}$  the $L^{2}$  structure then 
+\[
+    \langle f,k \rangle_{\mathcal{H}_{\sigma}} = \int_{G/H} \langle f(g), k(g) \rangle_{\mathcal{H}_{\xi}} \ d_\mu(Hg) 
+\]
+\end{define}
+
+\begin{theorem}
+    $\sigma$ is a unitary representation of $G$ on $\mathcal{H}_{\sigma}$.
+\end{theorem}
+
+\begin{proof}
+    \[%
+        \begin{split}
+            \langle \sigma (g) f, \sigma(g) k \rangle 
+            &= \int_{G/H} \langle f(tg), k(tg) \rangle \frac{d \mu \circ g}{d \mu}(t) \ d_{\mu}(Ht) \\
+            &= \int_{G/H} \langle f(t), k(t) \rangle \ d_{\mu}(Ht) \\
+            &= \langle f,k \rangle
+        \end{split} 
+    \]%
+\end{proof}
+
+\begin{example}
+    If $G$ is any group and $H$ is $\{ e \}$ and $\mathcal{I}$ is the trivial representation, then
+    \[ 
+        \mathcal{H}_{\sigma} = \{ f: G \rightarrow \mathcal{H}_{\{ e \}} \} = \{ f: G \rightarrow \mathbb{C} \} 
+    \] 
+    where our two conditions are solved
+    \[ 
+        f(e \star g ) = f(g) 
+    \]
+    and
+    \[ 
+        \int_{G/\{ e \}} | f(g) |^{2} \ d\mu_{L}(g) = \int_{G} | f(g) |^{2} \ d\mu_{L}(g) < \infty 
+    \]
+    \[ \sigma = \mathcal{I}\uparrow^{G}_{\{ e \}} .\]
+    Inducing the trivial representation onto the group produces the \textit{right regular representation} on $G$.
+\end{example}
+
+\section{Representations of $\mathcal{M}(2)$} 
+With $\mathcal{M}(2)$ being the direct product of a non-compact and a non-abelian group
+\[ \mathcal{M}(2) = \mathbb{R}^{2} \rtimes \mathcal{SO}(2) \] 
+we are left with the issue of producing its representations. If it were abelian, we could produce representations that were complex numbers. If it were compact, we could use the Peter-Weyl theorem to produce the matrices of its representations. Instead, we use the method of \textit{induced representations} which is detailed in the abstract in Section \ref{sec:induced_representations}.
+There are two different kinds of representations: characters and infinite dimensional representations. The set of infinite-dimensional representations have full Plancherel measure, and we will concentrate on these. The one-dimensional representations come from the characters of $\mathcal{SO}(2)$, given by
+\[%
+    \mathcal{SO}(2) = \mathcal{M}(2)/\mathbb{R}^{2}
+    \qquad
+    \chi_{n}(A(\alpha),x) = e^{in\alpha} 
+\]%
+these have zero Plancherel measure. We will now solely focus on the infinite dimensional representations. 
+
+\begin{theorem}
+    There exists a unitary representation of $\mathcal{M}(2)$ on the Hilbert space ${L}^{2}(S^{D-1})$, where $S^{N}$ is the $n$-sphere and $D$ is the dimension of $\mathcal{M}(2)$. Because $D=2$, we have $S^{1}$ as the argument of our Hilbert space.
+
+    This unitary representation operator takes the form
+    \[%
+        (U^{a}_{g}F)(s) = e^{i(x \cdot sa)}F(A(\alpha)^{-1}s)
+    \]%
+    where $g \in \mathcal{M}(2)$ is given by $g = (A(\alpha), x)$, so $x \in \mathbb{R}^{2}$, $a \in \mathbb{R}^{2}$, $s \in [0,2\pi]$,  and $F \in L^{2}([0,2\pi])$. Here, we say $U^{a}_{g}$ is a unitary representation acting on element $g$, with parameter $a$. 
+\end{theorem}
+\begin{proof}
+    We prove that $U^{a}_{g}$ is unitary by the definition given above.
+    Take any two functions $F$ and $F'$ from $L^{2}(\mathcal{SO}(2))$, then apply the operator and take the inner product, giving
+    \[%
+        \int_{\mathcal{SO}(2)} U^{a}_{g}F\ \overline{U^{a}_{g}F'} \ ds
+    .\]%
+    Which by our definition of the operation of the unitary operator on $F$ we can rewrite as 
+    \[%
+        =
+        \int_{\mathcal{SO}(2)} 
+        e^{i(x \cdot sa)}F(A(\alpha)^{-1}s) \
+        \overline{e^{i(x \cdot sa)}F'(A(\alpha)^{-1}s)}
+        \ ds
+    \]%
+    \[%
+        =
+        \int_{\mathcal{SO}(2)} 
+        e^{i(x \cdot sa)} e^{-i(x \cdot sa)} 
+        F(A(\alpha)^{-1}s) \
+        \overline{F'(A(\alpha)^{-1}s)}
+        \ ds
+    \]%
+    \[%
+        =
+        \int_{\mathcal{SO}(2)} 
+        F(A(\alpha)^{-1}s) \
+        \overline{F'(A(\alpha)^{-1}s)}
+        \ ds
+        =
+        \int_{\mathcal{SO}(2)} 
+        F(s) \
+        \overline{F'(s)}
+        \ ds \qquad(?)
+    \]%
+    This leaves us with the result of a unitary operator. If we denote the inner product in the physicist's notation, we have
+    \[%
+        \langle  \ U^{a}_{g}F\ , \ \overline{U^{a}_{g}F'} \ \rangle
+        =
+        \langle \ F \ , \  F'\  \rangle
+    \]%
+    and so $U^{a}_{g}$ is unitary. Further points about $U^{a}_{g}$ being strongly continuous can be found in the literature \cite{sugiura}.
+\end{proof}
+
+
+\begin{theorem}
+    For any two elements $g_1 = (A,x)$ and $g_2 = (B,y)$ in $\mathcal{M}(2)$ we have
+    \[%
+        U^{a}_{g_1 g_2} F =  U^{a}_{g_1} U^{a}_{g_2} F.
+    \]%
+\end{theorem}
+\begin{proof}
+    Recall that because $\mathcal{M}(2)$ is a group, it has the property of closure and so the combination of $g_1 \cdot g_2$ will be another Euclidean transformation. Because of this, we can assume that if $U^{a}_{g_1}$ and $U^{a}_{g_2}$ are defined on $\mathcal{M}(2)$, then $U^{a}_{g_1 \cdot g_2}$ is defined also.
+
+    Now, we show the equivalence stated above. Note that $g_1 \cdot g_2$ would have the form
+    \[%
+        g_1 \cdot g_2 = (A,x)\cdot(B.y) = (AB, x+Ay) 
+    \]%
+    and so 
+    \[%
+        \begin{split}
+        U^{a}_{g_1 \cdot g_2} 
+        &= e^{i (x+Ay \cdot sa)}F((AB)^{-1} s) \\
+        &= e^{i \left( (x+Ay) \cdot sa\right)}F(B^{-1}A^{-1} s) \\
+        &= e^{i (x \cdot sa)} e^{i (Ay \cdot sa)} F(B^{-1}A^{-1} s) \\
+        \end{split}
+    \]%
+    Now because $A \in \mathcal{SO}(2)$ it is an orthogonal matrix, which has the property that
+    \[ Av \cdot Aw = A^{-1}v \cdot A^{-1}w = v \cdot w .\]
+    So, we can write
+    \[%
+        =
+        e^{i (x \cdot sa)} e^{i (y \cdot A^{-1}sa)} F(B^{-1}A^{-1} s) \\
+    .\]%
+    This can then be simplified by our definition of $U^{a}_{g}$ to be
+    \[%
+        =
+        e^{i (x \cdot sa)} U^{a}_{g_2} F\left( A^{-1} s \right) \\
+    \]%
+    and then again via $g_1$
+    \[%
+        =
+        U^{a}_{g_1} U^{a}_{g_2} F ( s ) \\
+    .\]%
+    Then by transitivity we have as required:
+    \[%
+        U^{a}_{g_1 \cdot g_2} F(s)
+        =
+        U^{a}_{g_1} U^{a}_{g_2} F ( s ) \\
+    \]%
+\end{proof}
+
+Let us now examine the parameter $a$ in $U^{a}_{g}$. We noted before that $a \in \mathbb{R}^{2}$, but as it happens, we only need to examine $a \geq 0$. Let's find out why.
+
+\begin{theorem}
+    For a unitary representation, if $| a | = | b |$ then $U^{a}_{g} = U^{b}_{g}$.
+\end{theorem}
+\begin{proof}
+    For any rotation or change of basis of a square matrix, we have
+    \[%
+        R_{r} U^{a}_{g} R^{-1}_{r} 
+    .\]%
+    It is worth noting that $R_{r}$ is a unitary operator. Then for $F \in L^{2}(\mathcal{SO}(2))$ and some rotation of $A$
+    \[%
+        \begin{split}
+        (R_{A} \ U^{a}_{g} \ R^{-1}_{A} \ F)(s)
+        &= (U^{a}_{g} \ R^{-1}_{A} \ F)(sA)  \\
+        &=  e^{i (x \cdot sAa)}  (R^{-1}_{A} \ F)(A^{-1}sA)  \\
+        &= e^{i (x \cdot sAa)} \ F(A^{-1}s) \\
+        &= (U^{Aa}_{g} \ F )(s).
+        \end{split}
+    \]%
+    And so for $a,b \in \mathbb{R}^{2}$ if $| a | = | b |$ then there exists $A$ such that $b=Aa$. Because of this, it is only pertinent to study scalars $a \geq 0$.
+\end{proof}
+
+Now that we have covered why $a \in \mathbb{R}_{\geq 0}$ we can present the result of $U^{a}_{g}$ for any dimension $n$ of $\mathcal{M}(n)$.
+\begin{theorem}
+    For $n$-dimensions, we have
+    \[%
+        (U^{a}_{g} \ F)(s) = e^{i a (x \cdot s)} F(A^{-1} s)
+    \]% 
+    where $F \in L^{2}(S^{n-1})$, $s \in S^{n-1}$, $a \in \mathbb{R}_{\geq 0}$ and $x \in \mathbb{R}^{n}$, \cite{n_dim_euclidean_iur}. It is worth clarifying that $S^{N}$ is the $N$-sphere.
+    \QED
+\end{theorem}
+
+Let us now move from the abstract to the concrete and see what the operator looks like.
+
+\begin{theorem}
+    $U^{a}_{g}$ for $\mathcal{M}(2)$ acting on $F \in L^{2}(\mathcal{SO}(2))$ takes the form
+    \[%
+        \left(U^{a}_{g} F\right)(\theta) = e^{i a \rho \cos\left(\varphi - \theta\right)} F(\theta - \alpha) .
+    \]%
+    The parameters $\rho, \varphi$, and $\alpha$ are produced from $(A,x) \in \mathcal{M}(2)$. Where 
+    \[%
+        x = \begin{bmatrix} 
+            x_1 \\
+            x_2 \\		
+        \end{bmatrix} 
+        \mapsto
+        \rho e^{i \varphi}
+    \]%
+    and $\alpha$ comes from
+    \[%
+        A = 
+        \begin{bmatrix} 
+            \cos\left(\alpha\right)   & \sin\left(\alpha\right) \\
+            - \sin\left(\alpha\right) & \cos\left(\alpha\right) \\		
+        \end{bmatrix}.
+    \]%
+    \cite{sugiura}
+    \QED 
+\end{theorem}
+
+Mackey tells us that these operators are irreduicible representations of $\mathcal{M}(2)$. Because these operators are on $L^{2}(\mathbb{T})$, which is an infinite dimensional space, they themselves are infinite dimensional. We can think of this as an infinite dimensional matrix, taking the form of something similar as shown below.
+
+\begin{remark}
+    We will number this infinite dimensional matrix in a slightly unconventional way, with the indices being smallest at the centre of the matrix.
+\end{remark}
+
+\[%
+    \begin{matrix}
+        m=0 &  \\
+        \begin{bmatrix} 
+            \hspace{0.25cm} \ddots  & \vdots                         & \vdots                        & \vdots                        & \iddots \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \ldots  & \left(U^{a}_{g}\right)_{-1,-1} & \left(U^{a}_{g}\right)_{-1,0} & \left(U^{a}_{g}\right)_{-1,1} & \ldots  \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \ldots  & \left(U^{a}_{g}\right)_{0,-1}  & \left(U^{a}_{g}\right)_{0,0}  & \left(U^{a}_{g}\right)_{0,1}  & \ldots  \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \ldots  & \left(U^{a}_{g}\right)_{1,-1}  & \left(U^{a}_{g}\right)_{1,0}  & \left(U^{a}_{g}\right)_{1,1}  & \ldots  \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \iddots & \vdots                         & \vdots                        & \vdots                        & \ddots  \hspace{0.25cm} \vspace{0.25cm} \\
+        \end{bmatrix}
+            &  n=0
+             \\
+    \end{matrix}
+\]%
+
+It's easy to see how we could implement this in a computer. We would simply limit the size of the matrix to some positive integer value $N$ such that $-N \leq n,m \leq N$. This produces a $2N+1 \times 2N+1$ matrix (remember to count the index $n,m=0$).
+
+
+\small
+\[%
+    \begin{matrix}
+        m=0 &  \vspace{0.4cm}\\
+        \begin{bmatrix} 
+            \hspace{0.25cm} \left(U^{a}_{g}\right)_{-N,-N}   & \left(U^{a}_{g}\right)_{-N,-N+1} & \ldots                         & \ldots                        & \ldots & \left(U^{a}_{g}\right)_{-N,N-1} & \left(U^{a}_{g}\right)_{-N,N}     \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \left(U^{a}_{g}\right)_{-N+1,-N} & \ddots                           & \vdots                         & \vdots                        & \vdots                          & \iddots                         & \left(U^{a}_{g}\right)_{-N+1,N}     \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \vdots                           & \ldots                           & \left(U^{a}_{g}\right)_{-1,-1} & \left(U^{a}_{g}\right)_{-1,0} & \left(U^{a}_{g}\right)_{-1,1}   & \ldots                          & \vdots    \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \vdots                           & \ldots                           & \left(U^{a}_{g}\right)_{0,-1}  & \left(U^{a}_{g}\right)_{0,0}  & \left(U^{a}_{g}\right)_{0,1}    & \ldots                          & \vdots                            \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \vdots                           & \ldots                           & \left(U^{a}_{g}\right)_{1,-1}  & \left(U^{a}_{g}\right)_{1,0}  & \left(U^{a}_{g}\right)_{1,1}    & \ldots                          & \vdots     \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \left(U^{a}_{g}\right)_{N-1,-N}  & \iddots                          & \vdots                         & \vdots                        & \vdots                          & \ddots                          & \left(U^{a}_{g}\right)_{N-1,N}     \hspace{0.25cm} \vspace{0.25cm} \\
+            \hspace{0.25cm} \left(U^{a}_{g}\right)_{N,-N}    & \left(U^{a}_{g}\right)_{N,-N+1}  & \ldots                         & \ldots                        & \ldots  & \left(U^{a}_{g}\right)_{N,N-1}  & \left(U^{a}_{g}\right)_{N,N}      \hspace{0.25cm} \vspace{0.25cm} \\
+        \end{bmatrix}
+            &  n=0.
+             \\
+    \end{matrix}
+\]%
+\normalsize
+
+This begs the question, what are the elements of this matrix? 
+
+\begin{theorem}
+    The matrix elements of $U^{a}_{g}$, denoted $(U^{a}_{g})_{n,m}$ are given by
+    \[%
+        (U^{a}_{g})_{n,m} = {e^{-in\alpha} e^{i\varphi(n-m)}i^{m-n}J_{m-n}(a\rho)}  \\ 
+    \]%
+    More on $J_{m-n}(a\rho)$, the Bessel function of the first kind of order $m-n$, can be found in Section~\ref{sec:bessel_integral}.
+\end{theorem}
+
+\begin{proof}
+    \[%
+        \begin{split}
+            \left(U^{a}_{g}\right)_{n,m} 
+            &= \langle\  U^{a}_{g} e^{in\theta} \ , \ e^{im\theta} \ \rangle \\
+            &= \frac{1}{2\pi} \int^{2\pi}_{0} \left(U^{a}_{g} \ e^{in\theta}\right) \overline{e^{im\theta}} \ d\theta \\
+        \end{split}
+    \]%
+    Applying the definition of the operator $U^{a}_{g}$, and doing algebraic simplifications we get
+    \[%
+        \begin{split}
+            &= \frac{1}{2\pi} \int^{2\pi}_{0} \left(e^{ia \rho \cos\left(\varphi - \theta \right)} e^{in(\theta-\alpha)}\right) {e^{-im\theta}} \ d\theta \\
+            &= \frac{e^{-in\alpha}}{2\pi} \int^{2\pi}_{0} e^{ia\rho \cos\left(\varphi - \theta\right)}e^{i (n-m)\theta} \ d\theta \\
+        \end{split}
+    \]%
+    We can do a change of varaibles, $\theta= u +\varphi$ changing the equation
+    \[%
+        \begin{split}
+            &= \frac{e^{-in\alpha}}{2\pi} \int^{2\pi}_{0} e^{ia\rho \cos\left(\varphi-u-\varphi\right)}e^{i (n-m)(u+\varphi)} \ du\\
+            &= \frac{e^{-in\alpha}}{2\pi} \int^{2\pi}_{0} e^{ia\rho \cos\left(u\right)}e^{i (n-m)(u+\varphi)} \ du\\
+            &= \frac{e^{-in\alpha} e^{i(n-m)\varphi}}{2\pi} \underbrace{\int^{2\pi}_{0} e^{ia\rho \cos\left(u\right)}e^{i (n-m)(u)} \ du}_{(*)} \\
+        \end{split}
+    \]%
+    Let us solve the integral denoted by $(*)$. Recall that the formula for a Bessel function of the first kind is given by
+    \[%
+        J_{\ell}(x) = \frac{i^{- \ell}}{\pi} \int^{\pi}_{0} e^{i x R \cos\left(\theta\right)} \cos\left(\ell\theta\right) d\theta
+    .\]%
+    If we could transform the integral $(*)$ into this Bessel integral, we would solve our problem easily. Let us do so. Set $\ell = n-m$ and $R = a\rho$.
+    \[%
+            = \int^{2\pi}_{0} e^{ia\rho \cos\left(u\right)} e^{i (n-m)u} \ du = \int^{2\pi}_{0} e^{iR \cos\left(u\right)} e^{i \ell u} \ du
+    \]%
+    We can make a suitable change of limits
+    \[%
+         = \int^{2\pi}_{0} e^{iR \cos\left(u\right)} e^{i \ell u} \ du = \int^{\pi}_{-\pi} e^{iR \cos\left(u\right)} e^{i \ell u} \ du
+    \]%
+    and begin simplifying
+    \[%
+        \begin{split}
+            &= \int^{\pi}_{-\pi} e^{iR\cos\left(u\right)}e^{i\ell u} \ du \\
+            &= \left( \int^{0}_{-\pi} e^{iR\cos\left(u\right)}e^{i\ell u} \ du + \int^{\pi}_{0} e^{iR\cos\left(u\right)}e^{i\ell u} \ du \right)
+        \end{split} 
+    .\]%
+    Then if we take the left integral, reverse its limits and do a change of variables (again) with $u' = -u$
+    \[%
+        \begin{split}
+            &= \left( -\int^{\pi}_{0} e^{iR\cos\left(u\right)}e^{i\ell u} \ du + \int^{\pi}_{0} e^{iR\cos\left(u\right)}e^{i\ell u} \ du \right) \\
+            &= \left( -\int^{\pi}_{0} e^{iR\cos\left(-u\right)}e^{i\ell(-u)} \ (-)du + \int^{\pi}_{0} e^{iR\cos\left(u\right)}e^{i\ell u} \ du \right) \\
+            &=  \left( \int^{\pi}_{0} e^{iR\cos\left(u\right)}e^{i\ell(-u)} \ du + \int^{\pi}_{0} e^{iR\cos\left(u\right)}e^{i\ell u} \ du \right) \\
+        \end{split}
+    .\]%
+    Then combine the integrals
+    \[%
+        = \int^{\pi}_{0} e^{iR\cos\left(u\right)} (e^{i\ell u} + e^{i\ell(-u)}) \ du  \\
+    \]%
+    and using the identity $2 \cos\left(u\right) = e^{iu} + e^{-iu}$ we get something that corresponds to a Bessel function defined in Section~\ref{sec:bessel_integral}.
+    \[%
+        = 2\int^{\pi}_{0} e^{iR\cos\left(u\right)}  \cos\left(\ell u\right) \ du = 2\pi i^{\ell} J_{\ell}(R) = 2\pi i^{n-m} J_{n-m}(a\rho)
+    .\]%
+    If we substitute this back into the position of $(*)$ we can go back to solving the original problem.
+    \[%
+        \begin{split}
+            &= \frac{e^{-in\alpha} e^{i(n-m)\varphi}}{2\pi} \underbrace{\int^{2\pi}_{0} e^{ia\rho \cos\left(u\right)}e^{i (n-m)(u)} \ du}_{(*)} \\
+            & = \frac{e^{-in\alpha} e^{i(n-m)\varphi}}{2\pi} 2\pi i^{n-m} J_{n-m}(a\rho) \\ 
+        \end{split}
+    \]%
+    Meaning for matrix elements of $U^{a}_{g}$ we have
+    \[%
+            \left(U^{a}_{g}\right)_{n,m} =  e^{-in\alpha} e^{i(n-m)\varphi}i^{n-m}J_{n-m}(a\rho)   
+    .\]%
+\end{proof}
+
+This begins to paint a picture about what a truncated version of $U^{a}_{g}$ may look like. Again, to compute these matrix coefficients is laborious and so we have produced the results with original code which can be found in appendix Section~\ref{sec:m2_reps}
+
+$N=1$
+\[
+\left[\begin{matrix}e^{i \alpha} J_{0}\left(a \rho\right) & i e^{i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right)\\i e^{i
+ \phi} J_{1}\left(a \rho\right) & J_{0}\left(a \rho\right) & i e^{- i \phi} J_{1}\left(a \rho\right)\\- e^{- i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- i \alpha} e
+^{i \phi} J_{1}\left(a \rho\right) & e^{- i \alpha} J_{0}\left(a \rho\right)\end{matrix}\right]
+\]
+
+$N=2$
+\[
+\left[\begin{matrix}e^{2 i \alpha} J_{0}\left(a \rho\right) & i e^{2 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{2 i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) &
+ - i e^{2 i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{2 i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right)\\i e^{i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{i \
+alpha} J_{0}\left(a \rho\right) & i e^{i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{i \alpha} e^{- 3 i \phi}
+ J_{3}\left(a \rho\right)\\- e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{i \phi} J_{1}\left(a \rho\right) & J_{0}\left(a \rho\right) & i e^{- i \phi} J_{1}\left(a \rho\right) &
+ - e^{- 2 i \phi} J_{2}\left(a \rho\right)\\- i e^{- i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{- i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- i \alpha}
+e^{i \phi} J_{1}\left(a \rho\right) & e^{- i \alpha} J_{0}\left(a \rho\right) & i e^{- i \alpha} e^{- i \phi} J_{1}\left(a \rho\right)\\e^{- 2 i \alpha} e^{4 i \phi} J_{4}\left(
+a \rho\right) & - i e^{- 2 i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{- 2 i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- 2 i \alpha} e^{i \phi} J_{1}\left(
+a \rho\right) & e^{- 2 i \alpha} J_{0}\left(a \rho\right)\end{matrix}\right]
+\]
+
+$N=3$
+\tiny
+\[
+\left[\begin{matrix}e^{3 i \alpha} J_{0}\left(a \rho\right) & i e^{3 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{3 i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{3 i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{3 i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right) & i e^{3 i \alpha} e^{- 5 i \phi} J_{5}\left(a \rho\right) & - e^{3 i \alpha} e^{- 6 i \phi} J_{6}\left(a \rho\right)\\i e^{2 i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{2 i \alpha} J_{0}\left(a \rho\right) & i e^{2 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{2 i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{2 i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{2 i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right) & i e^{2 i \alpha} e^{- 5 i \phi} J_{5}\left(a \rho\right)\\- e^{i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{i \alpha} e^{i \phi} J_ {1}\left(a \rho\right) & e^{i \alpha} J_{0}\left(a \rho\right) & i e^{i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right)\\- i e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{2 i \phi} J_{2} \left(a \rho\right) & i e^{i \phi} J_{1}\left(a \rho\right) & J_{0}\left(a \rho\right) & i e^{- i \phi} J_{1}\left(a \rho\right) & - e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{- 3 i \phi} J_{3}\left(a \rho\right)\\e^{- i \alpha} e^{4 i \phi} J_{4}\left(a \rho\right) & - i e^{- i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{- i \alpha} e^{ 2 i \phi} J_{2}\left(a \rho\right) & i e^{- i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{- i \alpha} J_{0}\left(a \rho\right) & i e^{- i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{- i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right)\\i e^{- 2 i \alpha} e^{5 i \phi} J_{5}\left(a \rho\right) & e^{- 2 i \alpha} e^{4 i \phi} J_{4}\left(a \rho\right) & - i e^{- 2 i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{- 2 i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- 2 i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{- 2 i \alpha} J_{0}\left(a \rho\right) & i e^{- 2 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right)\\- e^{- 3 i \alpha} e^{6 i \phi} J_{6}\left(a \rho\right) & i e^{ - 3 i \alpha} e^{5 i \phi} J_{5}\left(a \rho\right) & e^{- 3 i \alpha} e^{4 i \phi} J_{4}\left(a \rho\right) & - i e^{- 3 i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{ - 3 i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- 3 i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{- 3 i \alpha} J_{0}\left(a \rho\right)\end{matrix}\right]
+\]
+\normalsize
+
+
+\section{Fourier Transform of $\mathcal{M}(2)$} 
+
+We use the normalised Haar measure on $\mathcal{M}(2)$. 
+\begin{define}
+    The normalised Haar measure on $\mathcal{M}(2)$ is given by
+    \[%
+        \begin{split}
+        \mu_{L}(\mathcal{M}(2)) 
+        &= \int_{\mathcal{M}(2)} \ d_{\mu_{L}} (g) \\
+        &= \frac{1}{(2\pi)^{2}} \int\int\int dx_1 \ dx_2 \ d\alpha \\
+        &= \frac{1}{(2\pi)^{2}} \int^{2\pi}_{0}\int^{2\pi}_{0}\int^{\infty}_{0} \ \rho \ d\rho \ d\varphi \ d\alpha .\\
+        \end{split}
+    \]%
+    where a translation by $x = [x_1 \ x_2]^{T}$ is transformed to a polar coordinates $\rho ,\varphi$.
+\end{define}
+\begin{define}
+    The Fourier transform of $\mathcal{M}(2)$ at the infinite-dimensional representations is given by
+    \[%
+        \hat{f}(a) = \int_{\mathcal{M}(2)} f(g) U^{a}_{g^{-1}} \ dg \qquad : a \geq 0.
+    \]%
+    On the one-dimensional representations it takes the form
+    \[%
+        \hat{f}(\chi_{n}) = \int_{\mathcal{SO}(2)} f(A(\alpha),x) e^{-in\alpha} \ d_{\mu}(\alpha) .
+    \]%
+\end{define}
+
+\begin{define}
+    An arbitrary matrix element of $\hat{f}$, denoted $\hat{f}_{nm}$, and is given by
+    \[%
+        \begin{split}
+            \hat{f}_{n,m} &= \int_{\mathcal{M}(2)} f(g) (U^{a}_{g^{-1}})_{n,m} d_{\mu_{L}}(g)  \\
+                         &= \frac{1}{(2\pi)^{2}} \int^{2\pi}_{0}\int^{2\pi}_{0}\int^{\infty}_{0} f(\rho, \varphi, \theta) (U^{a}_{g^{-1}})_{n,m} \ \rho \ d\rho \ d\varphi \ d\alpha \\
+        \end{split}
+    \]% 
+\end{define}
+
+\begin{define}
+    The inverse Fourier transform on $\mathcal{M}(2)$  is given by
+    \[%
+        f(g) = \int^{+\infty}_{0} \text{Tr}\left(U^{a}_{g}\hat{f}\right) a \ da
+    \]
+\end{define}
+
+
+\begin{Proof}{The inversion formula of $\mathcal{M}(2)$}
+    Any function $f \in L^{2}(\mathcal{M}(2))$ can be written as a Fourier series both on $\varphi$ (angle of rotation about the origin) and $\alpha$ (angle of rotation of object around its own axis or centre-of-mass), as these two quantities are inherently periodic.
+    \[%
+        f(g) = f(\rho, \varphi, \alpha) = \sum_{j=-\infty}^{\infty} \sum_{k=-\infty}^{\infty} F_{jk}(\rho) e^{ij\varphi} e^{ik\alpha}
+    .\]%
+    Because both these indices are integers, we can index them in reverse (i.e. $j'=-j$ and $k'=-k$) to allow for a simplification later. Because of this, we can express these functions as
+    \[%
+        f(\rho, \varphi, \alpha) = \sum_{j=-\infty}^{\infty} \sum_{k=-\infty}^{\infty} F_{jk}(\rho) e^{-ij\varphi} e^{-ik\alpha} 
+    .\]%
+    To eliminate the large numbers of summation signs $(\Sigma)$ we will find the matrix coefficients of the transform and do the summation at the end.
+    \[%
+        \begin{split}
+            \hat{f}_{n,m} &= \frac{1}{(2\pi)^{2}} \int^{2\pi}_{0}\int^{2\pi}_{0}\int^{\infty}_{0} F_{jk}(\rho) e^{-ij\varphi} e^{-ik\alpha} (U^{a}_{g^{-1}})_{n,m} \ \rho \ d\rho \ d\varphi \ d\alpha \\
+                          &= \frac{1}{(2\pi)^{2}} \int^{2\pi}_{0}\int^{2\pi}_{0}\int^{\infty}_{0} \left( F_{jk}(\rho) e^{-ij\varphi} e^{-ik\alpha} \right) \left(
+                          \overline{ e^{-in\alpha} e^{i(n-m)\varphi}i^{n-m}J_{n-m}(a\rho)}
+                          \right) \ \rho \ d\rho \ d\varphi \ d\alpha \\
+                          &= \frac{1}{(2\pi)^{2}} \int^{2\pi}_{0}\int^{2\pi}_{0}\int^{\infty}_{0} \left( F_{jk}(\rho) e^{-ij\varphi} e^{-ik\alpha} \right) \left( 
+                          e^{in\alpha} e^{i(m-n)\varphi}i^{n-m}J_{m-n}(a\rho)
+                          \right) \ \rho \ d\rho \ d\varphi \ d\alpha \\
+                          &= 
+                          i^{n-m}
+                          \left( \frac{1}{2\pi} \int^{2\pi}_{0} e^{-ik\alpha} e^{in\alpha} \ d\alpha \right )
+                          \left( \frac{1}{2\pi} \int^{2\pi}_{0} e^{-ij\varphi} e^{i(m-n)\varphi} \        d\varphi       \right )
+                          \left( \int^{\infty}_{0} F_{j,k}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho          \right ) \\
+                          &=
+                          i^{n-m}
+                          \left( \delta_{k, n} \ \delta_{j, m-n} \right)
+                          \left(  \int^{\infty}_{0} F_{j,k}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho   \right) \\
+                          &=
+                          i^{n-m}
+                          \left(  \int^{\infty}_{0} F_{n-m,m}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho   \right) \\
+                          \\
+        \end{split}
+    \]%
+    This shows that the matrix elements of $\hat{f}$ are actually Hankel transforms.
+    Using the inversion formula we have
+    \[%
+        \begin{split}
+            f(g) &= \int^{\infty}_{0} \text{Tr}\left(\hat{f}(a)U^{a}_{g}\right) \ d_{\mu_{L}}(g) \\
+                 &=  \sum_{m} \sum_{n} \int^{\infty}_{0} \hat{f}_{n,m} (U^{a}_{g})_{n,m} \ a \ da \\
+                 &=  \sum_{m} \sum_{n} \int^{\infty}_{0} 
+                          i^{n-m}
+                \left( 
+                    \int^{\infty}_{0} F_{n-m,m}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho  
+                \right)
+                \left(
+                    e^{-in\alpha} e^{i(n-m)\varphi}i^{m-n}J_{m-n}(a\rho)   
+                \right) a \ da \\
+                 &= 
+                 \sum_{m} \sum_{n} e^{-i(m\alpha + (n-m)\varphi)}
+                 \underbrace{
+                 \int^{\infty}_{0} 
+                 \underbrace{
+                 \left(
+                    \int^{\infty}_{0} F_{n-m,m}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho  
+                 \right)}_{\text{Hankel transform}}
+                 J_{m-n}(a\rho)  \ a \ da
+                 }_{\text{Inverse Hankel transform}}
+                 \\
+                 &= 
+                 \sum_{j} \sum_{k} F_{j,k}(\rho) e^{-ij\varphi} e^{-ik\alpha}
+                 \\
+                 &= f(g)
+        \end{split}
+    \]%
+\end{Proof}
+
+\section{Convolution on $\mathcal{M}(2)$} 
+
+First we define convolution on $\mathcal{M}(2)$.
+\begin{define}
+    \[%
+        (f_1 * f_2) (g) =  \int_{G} f_1(h) f_2(h^{-1}g)\ d_{\mu_{L}}(h)
+    \]%     
+\end{define}
+
+Then, we claim that the Fourier transform of a convolution of two functions on $\mathcal{M}(2)$ is equivalent to a product of their individual transforms (recall here that elements of $\mathcal{M}(2)$ are matrices and that the order from left-to-right is important).
+\begin{theorem}
+    For $f_1$ and $f_2$ on $\mathcal{M}(2)$, we have
+    \[%
+        \mathcal{F}(f_1 * f_2) = \hat{f_2}(a) \hat{f_1}(a)
+    .\]%
+\end{theorem}
+
+\begin{proof}
+    \[%
+        \begin{split}
+            \mathcal{F}(f_1 * f_2) &= \int_{G} (f_1 * f_2)(g) U^{a}_{g^{-1}} \ d_{\mu_{L}}(g) \\
+                                   &= \int_{G} \left( \int_{G} 
+                                       f_1(h) f_2(h^{-1}g) 
+                                       \ d_{\mu_{L}}(h) \right) U^{a}_{g^{-1}}\ d_{\mu_{L}}(g) \\
+        \end{split} 
+    \]%
+    and by Fubini
+    \[%
+         \begin{split}
+            \mathcal{F}(f_1 * f_2) 
+                                   &= \int_{G} \left( \int_{G} 
+                                       f_2(h^{-1}g) U^{a}_{g^{-1}}\ d_{\mu_{L}}(g)\right) 
+                                       f_1(h) \ d_{\mu_{L}}(h)  \\
+        \end{split} 
+    \]%
+    Because $\mathcal{M}(2)$ is unimodular, and the measure is invariant under the group's associative law (which in this case is Euclidean movement) we can write
+    \[%
+        \int_{G} f(hg) \ d_{\mu_{L}}(g) =
+        \int_{G} f(gh) \ d_{\mu_{L}}(g) =
+        \int_{G} f(g^{-1}) \ d_{\mu_{L}}(g) =
+        \int_{G} f(g) \ d_{\mu_{L}}(g)
+    \]%
+    then we have
+    \[%
+        \int_{G} f_2(h^{-1}hg) U^{a}_{(hg)^{-1}}\ d_{\mu_{L}}(g) =
+        \int_{G} f_2(g) U^{a}_{g^{-1}h^{-1}}\ d_{\mu_{L}}(g) 
+    \]%
+    and by the properties of the unitary operator $U$ we can write
+    \[%
+        U^{a}_{g^{-1}h^{-1}} = U^{a}_{g^{-1}} U^{a}_{h^{-1}}
+    \]%
+    then taking this information back to our convolution problem we get
+    \[%
+        \begin{split}
+           &= \int_{G} 
+           \left( \int_{G} f_2(h^{-1}hg) U^{a}_{g^{-1}h^{-1}}\ d_{\mu_{L}}(g)\right) 
+               f_1(h) \ d_{\mu_{L}}(h)  \\
+            &= 
+               \left( \int_{G} f_2(g) U^{a}_{g^{-1}}\ d_{\mu_{L}}(g)\right) 
+               \left(\int_{G} f_1(h) U^{a}_{h^{-1}}\ d_{\mu_{L}}(h)\right)  \\
+            \\
+            &= \hat{f_2}(a) \hat{f_1}(a).
+        \end{split} 
+    \]%
+\end{proof}
+
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
+
