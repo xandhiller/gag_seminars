@@ -1,7 +1,12 @@
 \BOOKMARK [1][-]{section.1}{Construction of M\(n\)}{}% 1
-\BOOKMARK [1][-]{section.2}{Representations and Miscellaneous Definitions}{}% 2
+\BOOKMARK [1][-]{section.2}{Representations}{}% 2
 \BOOKMARK [1][-]{section.3}{Induced Representations}{}% 3
 \BOOKMARK [1][-]{section.4}{Representations of M\(2\)}{}% 4
-\BOOKMARK [1][-]{section.5}{Fourier Transform of M\(2\)}{}% 5
-\BOOKMARK [1][-]{section.6}{Convolution on M\(2\)}{}% 6
-\BOOKMARK [1][-]{section.7}{Matrix Coefficients of Representations of M\(2\)}{}% 7
+\BOOKMARK [1][-]{section.5}{Results from the Fourier transform on M\(2\)}{}% 5
+\BOOKMARK [1][-]{section.6}{Appendix}{}% 6
+\BOOKMARK [2][-]{subsection.6.1}{Matrix Coefficients of Representations of M\(2\)}{section.6}% 7
+\BOOKMARK [2][-]{subsection.6.2}{Bessel Function}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.5}{Hankel Transform}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.7}{Fourier Transform of M\(2\)}{section.6}% 10
+\BOOKMARK [3][-]{subsubsection.6.10.1}{The Inversion Formula}{subsection.6.7}% 11
+\BOOKMARK [3][-]{subsubsection.6.12.1}{Convolution on M\(2\)}{subsection.6.7}% 12

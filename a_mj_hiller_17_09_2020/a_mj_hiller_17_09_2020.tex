@@ -22,7 +22,7 @@
 \input{dtper_article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{Alex Hiller}
-\title{Harmonic Analysis of $\mathcal{M}(2)$}
+\title{Harmonic Analysis on $\mathcal{M}(2)$}
 \date{September 17, 2020}
 % \pagenumbering{gobble}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,9 +39,19 @@ We detail the extension of harmonic analysis on compact groups to those which ar
 
 Euclid's Elements uses the concepts of \textit{rotation}, \textit{translation} and \textit{reflection} to prove many theorems about two-dimensional geometry \cite{euclids_elements}. We develop here the Euclidean motion groups that make use of {rotation} and {translation} but \textit{not} reflection. \par
 It is worth noting that within the literature $\mathcal{M}(n)$ often also referred to as $\mathcal{SE}(n)$ -- the difference seems to come from whether the paper is about engineering or mathematics. $\mathcal{M}(n)$ appears to be the mathematician's notation and $\mathcal{SE}(n)$ is more common amongst engineering authors.
+
+We have seen in previous talks that if our group is locally compact abelian, then we can find the characters and perform harmonic analysis, on groups such as \[(\mathbb{R}, +), (\mathbb{R}\backslash \{ 0 \}, \times),(\mathbb{C}, +), (\mathbb{C}\backslash \{ 0 \}, \times),  (\mathbb{Z}, +), \text{ and }(\mathbb{Z}/n\mathbb{Z}, +).\]
+It was also well detailed by Gou in two talks previous about how to go about decomposing groups that are both compact and non-commutative into an infinite direct-sum of finite-dimensional vector spaces via the Peter-Weyl theorem. For example, this can be done on $\mathcal{SO}(n)$ and $\mathcal{SU}(n)$, for $n$ finite\footnote{Probably.} and in $\mathbb{Z}$.
+
+We will have to move beyond this to tackle $\mathcal{M}(2)$, as it is only locally compact and non-commutative -- to do this we will utilise (but not fully exposit) the Mackey machine.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Construction of $\mathcal{M}(n)$} 
 \begin{define}
-    We denote the $n$-dimensional Euclidean motion group as $\mathcal{M}(n)$. This group can be generated as a semidirect product of $(\mathbb{R}^{n},+)$ and $(\mathcal{SO}(n), \times)$, i.e. \[\mathcal{M}(n) = \mathbb{R}^{n} \rtimes \mathcal{SO}(n).\] We denote an element of $\mathcal{M}(n)$ as an ordered pair $(A, x)$ where $A$ is an $n \times n$ matrix from $\mathcal{SO}(n)$ and $x$ is an $n \times 1$ vector from $\mathbb{R}^{n}$. Its associative law is denoted by $\cdot$ and takes the form: \[ (A,x)\cdot (B,y) = (AB, x+Ay) .\]
+    We denote the $n$-dimensional Euclidean motion group as $\mathcal{M}(n)$. This group can be generated as a semidirect product of $(\mathbb{R}^{n},+)$ and $(\mathcal{SO}(n), \times)$, i.e. 
+    \[
+        \mathcal{M}(n) = \mathbb{R}^{n} \rtimes \mathcal{SO}(n), 
+    \]
+    this can be done because $\mathbb{R}^{n} \triangleleft \mathcal{M}(n)$.\footnote{By this notation, we mean that $\mathbb{R}^{n}$ is a normal subgroup of $\mathcal{M}(n)$.} We denote an element of $\mathcal{M}(n)$ as an ordered pair $(A, x)$ where $A$ is an $n \times n$ matrix from $\mathcal{SO}(n)$ and $x$ is an $n \times 1$ vector from $\mathbb{R}^{n}$. The group's associative law is denoted by $\cdot$ and takes the form: \[ (A,x)\cdot (B,y) = (AB, x+Ay) .\]
 \end{define}
 \begin{theorem}
     $\mathcal{M}(n)$ is a group. 
@@ -70,7 +80,7 @@ It is worth noting that within the literature $\mathcal{M}(n)$ often also referr
     \item For any two elements in $\mathcal{M}(n)$, $(A,x)$ and $(B,y)$, we must show that their resulting combination, $(AB,x+Ay)$ is also in $\mathcal{M}(n)$. This reduces once again down to a problem in the individual subgroups, we must show $x+Ay \in \mathbb{R}^{n}$ and $AB \in \mathcal{SO}(n)$. $AB$ belonging to $\mathcal{SO}(n)$ follows from $\mathcal{SO}(n)$ being a group. $x+Ay$ is $x$ in combination to an orthogonally transformed vector, $Ay$, which we consider rotated. Any rotated vector in $\mathbb{R}^{n}$ is still contained within the group $(\mathbb{R}^{n},+)$, it follows that $x+Ay$ is in $\mathbb{R}^{n}$. \end{enumerate}
 \end{proof}
 
-\section{Representations and Miscellaneous Definitions} 
+\section{Representations} 
 
 \begin{Define}{Representation}
     A representation $\rho$ is a function which maps elements of a group $G$ to operators on a vector space $\mathcal{GL}(V)$. \[ \rho : G \rightarrow \mathcal{GL}(V) .\]
@@ -108,41 +118,6 @@ After we are in a vector space we can begin to do analysis and even differential
 %    
 %\end{Remark}
 
-\begin{Remark}{Some notes on LCA groups, Peter-Weyl theorem}
-    For locally compact abelian groups, we can find the characters -- one dimensional complex-valued representations in the dual group. For compact groups we can use the Peter-Weyl theorem to decompose the representations into an infinite sum of integer order vector spaces. For $\mathcal{M}(2)$, we have only that it is locally compact, because of this we are using the Mackey machine to achieve our irreducible unitary representations. 
-\end{Remark}
-
-\begin{Define}{Integral Representation}
-    \label{sec:bessel_integral}
-    $J_{\alpha}$ can also be expressed as integral equations
-    \[ J_\alpha(x) = \frac{1}{\pi} \int^{\pi}_{0} \cos\left(x \sin\left(\theta\right) - \alpha\theta\right)  \ d\theta = \frac{i^{-\alpha}}{\pi} \int^{\pi}_{0} e^{ix \cos\left(\theta\right)} \cos\left(\alpha\theta\right) \ d\theta .\] 
-    \par
-\end{Define}
-Should $\alpha$ not be an integer, then we attain $Y_{\alpha}$ which is termed a \textit{Bessel function of the second kind} with order $\alpha$.
-
-\begin{Theorem}{Properties of the Bessel function} For $n \in \mathbb{Z}$
-    \[%
-        J_{-n} = (-1)^{n}J_{n} 
-    \]%
-    and
-    \[%
-        \overline{J_{n}(x)} = J_{n}(\overline{x}).
-    \]%
-    \QED
-\end{Theorem}
-
-\begin{Define}{Hankel Transform}
-    The Hankel transform is given by:
-    \[
-        F_{\nu}(k) = \int^{\infty}_{0} f(r) J_{\nu}(kr) \ r \ dr
-    \]
-    and the inverse Hankel transform by
-    \[
-        f(r) = \int^{\infty}_{0} F_{\nu}J_{\nu}(kr) \ k \ dk.
-    \]
-    Interestingly, the integration-kernel of the integral transform is the same in both formulae. The function $f$ uses the variable $r$ to indicate the function is usually radially symmetric.
-\end{Define}
-
 
 \section{Induced Representations} 
 \label{sec:induced_representations}
@@ -179,6 +154,7 @@ We now define $\mathcal{H}_{\sigma}$ as the set of functions $f: G \rightarrow \
         \]%
 \end{enumerate}
 
+First suppose we have $E \subseteq G/H$ with associative law $\star$ and an element $g_1 \in G$.
 \begin{Define}{Invariant measure}
     An invariant measure has the property 
     \[ 
@@ -198,7 +174,7 @@ We now define $\mathcal{H}_{\sigma}$ as the set of functions $f: G \rightarrow \
 
 \begin{Define}{$\mu \circ g (E)$}
     \[%
-        \mu \circ g(E) = \mu(E \star g) 
+        \mu \circ g(E) = \mu(E \star g) .
     \]%
 \end{Define}
 
@@ -215,13 +191,14 @@ If we have a quasi-invariant measure, we know there exists a function that will 
     \]%
 \end{Theorem}
 
+For $\mu \ll \nu$, we can more easily think of them as two measures who share the same null sets.
+
 \begin{Theorem}{Mackey's Lemma}
     If $G$ and $H$ are separable then there exists a quasi-invariant measure on $G/H$.\QED
 \end{Theorem}
 
 Although we are always aiming to obtain an invariant measure, that is not always possible, but Mackey tells us that there always exists a quasi-invariant measure. We now define invariant and quasi-invariant measures. 
 
-First suppose we have $E \subseteq G/H$ with associative law $\star$ and an element $g_1 \in G$.
     
 
     
@@ -246,10 +223,12 @@ We give $\mathcal{H}_{\sigma}$  the $L^{2}$  structure then
 \begin{proof}
     \[%
         \begin{split}
-            \langle \sigma (g) f, \sigma(g) k \rangle 
-            &= \int_{G/H} \langle f(tg), k(tg) \rangle \frac{d \mu \circ g}{d \mu}(t) \ d_{\mu}(Ht) \\
-            &= \int_{G/H} \langle f(t), k(t) \rangle \ d_{\mu}(Ht) \\
-            &= \langle f,k \rangle
+            \langle \sigma (g) f(t), \sigma(g) k(t) \rangle_{\mathcal{H}_{\sigma}}
+            &= \int_{G/H} \langle \sigma(g)f(t), \sigma(g)k(t) \rangle_{\mathcal{H}_{\xi}} \ d_{\mu}(Ht) \\
+            &= \int_{G/H} \left\langle f(tg){\sqrt{\frac{d \mu \circ g}{d \mu}(t)}} \ ,\ k(tg){\sqrt{\frac{d \mu \circ g}{d \mu}(t)}}  \ \right\rangle_{\mathcal{H}_{\xi}} d_{\mu}(Ht) \\
+            &= \int_{G/H} \left\langle f(tg), k(tg) \right\rangle_{\mathcal{H}_{\xi}} \frac{d \mu \circ g}{d \mu}(t) \ d_{\mu}(Ht) \\
+            &= \int_{G/H} \langle f(t), k(t) \rangle_{\mathcal{H}_{\xi}} \ d_{\mu}(Ht) \\
+            &= \langle f,k \rangle_{\mathcal{H}_{\sigma}}
         \end{split} 
     \]%
 \end{proof}
@@ -282,6 +261,37 @@ There are two different kinds of representations: characters and infinite dimens
     \chi_{n}(A(\alpha),x) = e^{in\alpha} 
 \]%
 these have zero Plancherel measure. We will now solely focus on the infinite dimensional representations. 
+
+\begin{figure}[!htbp]
+\begin{center}
+\begin{tikzpicture}
+    \tikzstyle{my_vertex}=[draw, circle, fill=black, minimum size=2pt, inner sep=0pt]
+    \draw (0,0) node[my_vertex] (root) {} -- ++(0:4cm) node (end_real_line);
+    % dots above zero
+    \filldraw[black] (0,0.5) circle (1pt);
+    \filldraw[black] (0,1.0) circle (1pt);
+    \filldraw[black] (0,1.5) circle (1pt);
+    % dots below zero
+    \filldraw[black] (0,-0.5) circle (1pt);
+    \filldraw[black] (0,-1.0) circle (1pt);
+    \filldraw[black] (0,-1.5) circle (1pt);
+    % continuation of the real line
+    \filldraw[black] (4.1,0) circle (0.3pt);
+    \filldraw[black] (4.2,0) circle (0.3pt);
+    \filldraw[black] (4.3,0) circle (0.3pt);
+    % Continuation of fourier series
+    \filldraw[black] (0,1.8) circle (0.3pt);
+    \filldraw[black] (0,1.9) circle (0.3pt);
+    \filldraw[black] (0,2.0) circle (0.3pt);
+    \filldraw[black] (0,-1.8) circle (0.3pt);
+    \filldraw[black] (0,-1.9) circle (0.3pt);
+    \filldraw[black] (0,-2.0) circle (0.3pt);
+    \node at (-1,0) {$a=0$};
+    \node at (5,0) {$a \rightarrow \infty$};
+\end{tikzpicture}
+\caption{There are two kinds of representations $\mathcal{M}(2)$, the ones produced as a Fourier series by $\mathcal{SO}(2)$, and the infinite dimensional operators. As we will see, $a$ is unique up to rotation along $\mathbb{R}^{+}$. We will leave the Fourier series for someone else and focus on the infinite dimensional operators.}
+\end{center}
+\end{figure}
 
 \begin{theorem}
     There exists a unitary representation of $\mathcal{M}(2)$ on the Hilbert space ${L}^{2}(S^{D-1})$, where $S^{N}$ is the $n$-sphere and $D$ is the dimension of $\mathcal{M}(2)$. Because $D=2$, we have $S^{1}$ as the argument of our Hilbert space.
@@ -324,13 +334,13 @@ these have zero Plancherel measure. We will now solely focus on the infinite dim
         \int_{\mathcal{SO}(2)} 
         F(s) \
         \overline{F'(s)}
-        \ ds \qquad(?)
+        \ ds 
     \]%
     This leaves us with the result of a unitary operator. If we denote the inner product in the physicist's notation, we have
     \[%
-        \langle  \ U^{a}_{g}F\ , \ \overline{U^{a}_{g}F'} \ \rangle
+        \langle   U^{a}_{g}F ,  \overline{U^{a}_{g}F'}  \rangle
         =
-        \langle \ F \ , \  F'\  \rangle
+        \langle F ,  F'  \rangle
     \]%
     and so $U^{a}_{g}$ is unitary. Further points about $U^{a}_{g}$ being strongly continuous can be found in the literature \cite{sugiura}.
 \end{proof}
@@ -501,7 +511,7 @@ This begs the question, what are the elements of this matrix?
     \[%
         \begin{split}
             \left(U^{a}_{g}\right)_{n,m} 
-            &= \langle\  U^{a}_{g} e^{in\theta} \ , \ e^{im\theta} \ \rangle \\
+            &= \langle  U^{a}_{g} e^{in\theta} , e^{im\theta} \rangle \\
             &= \frac{1}{2\pi} \int^{2\pi}_{0} \left(U^{a}_{g} \ e^{in\theta}\right) \overline{e^{im\theta}} \ d\theta \\
         \end{split}
     \]%
@@ -598,8 +608,99 @@ $$N=3$$
 \]
 \normalsize
 
+\section{Results from the Fourier transform on $\mathcal{M}(2)$} 
 
-\section{Fourier Transform of $\mathcal{M}(2)$} 
+Finding matrix coefficients of a function:
+\[
+    \begin{split}
+        \hat{f}_{n,m} &= \frac{1}{(2\pi)^{2}} \int^{2\pi}_{0}\int^{2\pi}_{0}\int^{\infty}_{0} f(\rho, \varphi, \theta) (U^{a}_{g^{-1}})_{n,m} \ \rho \ d\rho \ d\varphi \ d\alpha \\
+        &= i^{n-m} \left(  \int^{\infty}_{0} F_{n-m,m}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho   \right) .
+    \end{split}
+\]
+
+From the inversion formula:
+\[
+    f(g) = \sum_{m} \sum_{n} e^{-i(m\alpha + (n-m)\varphi)}
+    \underbrace{
+    \int^{\infty}_{0} 
+    \underbrace{
+    \left(
+    \int^{\infty}_{0} F_{n-m,m}(\rho) J_{m-n}(a\rho)  \ \rho \ d\rho  
+    \right)}_{\text{Hankel transform}}
+    J_{m-n}(a\rho)  \ a \ da
+    }_{\text{Inverse Hankel transform}}.
+    \\
+\]
+
+Regarding convolution:
+\[
+        (f_1 * f_2) (g) =  \int_{G} f_1(h) f_2(h^{-1}g)\ d_{\mu_{L}}(h)
+        \quad
+        \Rightarrow
+        \quad
+        \widehat{(f_1 * f_2)} = \hat{f_2}(a) \hat{f_1}(a).
+\]
+
+Proofs of all results can be found in the Appendix, and are fairly straight-forward from previous components of the talk.
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\clearpage
+\begin{center}
+\huge{\textbf{Appendix}}
+\end{center}
+\clearpage
+
+\invisiblesection{Appendix}
+\subsection{Matrix Coefficients of Representations of $\mathcal{M}(2)$} 
+\label{sec:m2_reps}
+\lstinputlisting[language=Python]{uga_m2.py}
+
+
+\subsection{Bessel Function} 
+\begin{Define}{Integral form of the Bessel function}
+    \label{sec:bessel_integral}
+    $J_{\alpha}$ can also be expressed as integral equations
+    \[ J_\alpha(x) = \frac{1}{\pi} \int^{\pi}_{0} \cos\left(x \sin\left(\theta\right) - \alpha\theta\right)  \ d\theta = \frac{i^{-\alpha}}{\pi} \int^{\pi}_{0} e^{ix \cos\left(\theta\right)} \cos\left(\alpha\theta\right) \ d\theta .\] 
+    \par
+\end{Define}
+Should $\alpha$ not be an integer, then we attain $Y_{\alpha}$ which is termed a \textit{Bessel function of the second kind} with order $\alpha$.
+
+\begin{Theorem}{Properties of the Bessel function} For $n \in \mathbb{Z}$
+    \[%
+        J_{-n} = (-1)^{n}J_{n} 
+    \]%
+    and
+    \[%
+        \overline{J_{n}(x)} = J_{n}(\overline{x}).
+    \]%
+    \QED
+\end{Theorem}
+
+\subsection{Hankel Transform} 
+\begin{Define}{Hankel Transform}
+    The Hankel transform is given by:
+    \[
+        F_{\nu}(k) = \int^{\infty}_{0} f(r) J_{\nu}(kr) \ r \ dr
+    \]
+    and the inverse Hankel transform by
+    \[
+        f(r) = \int^{\infty}_{0} F_{\nu}(k)J_{\nu}(kr) \ k \ dk.
+    \]
+    Interestingly, the integration-kernel of the integral transform is the same in both formulae. The transform is defined for every point at which $f$  is continuous, $f$  must also have bounded variation in every finite sub-interval of  $(0, \infty)$  and must satisfy
+    \[
+        \int^{\infty}_{0} | f(r) | r^{1/2} \ dr < \infty.
+    \]
+\end{Define}
+
+\subsection{Fourier Transform of $\mathcal{M}(2)$} 
 
 We use the normalised Haar measure on $\mathcal{M}(2)$. 
 \begin{define}
@@ -635,13 +736,14 @@ We use the normalised Haar measure on $\mathcal{M}(2)$.
     \]% 
 \end{define}
 
+\subsubsection{The Inversion Formula} 
+
 \begin{define}
     The inverse Fourier transform on $\mathcal{M}(2)$  is given by
     \[%
         f(g) = \int^{+\infty}_{0} \text{Tr}\left(U^{a}_{g}\hat{f}\right) a \ da
     \]
 \end{define}
-
 
 \begin{Proof}{The inversion formula of $\mathcal{M}(2)$}
     Any function $f \in L^{2}(\mathcal{M}(2))$ can be written as a Fourier series both on $\varphi$ (angle of rotation about the origin) and $\alpha$ (angle of rotation of object around its own axis or centre-of-mass), as these two quantities are inherently periodic.
@@ -710,7 +812,7 @@ We use the normalised Haar measure on $\mathcal{M}(2)$.
     \]%
 \end{Proof}
 
-\section{Convolution on $\mathcal{M}(2)$} 
+\subsubsection{Convolution on $\mathcal{M}(2)$} 
 
 First we define convolution on $\mathcal{M}(2)$.
 \begin{define}
@@ -775,20 +877,6 @@ Then, we claim that the Fourier transform of a convolution of two functions on $
         \end{split} 
     \]%
 \end{proof}
-
-
-\bibliographystyle{apalike}
-\bibliography{references}
-
-\clearpage
-\begin{center}
-\huge{\textbf{Appendix}}
-\end{center}
-\clearpage
-
-\section{Matrix Coefficients of Representations of $\mathcal{M}(2)$} 
-\label{sec:m2_reps}
-\lstinputlisting[language=Python]{uga_m2.py}
 
 
 \end{document}
