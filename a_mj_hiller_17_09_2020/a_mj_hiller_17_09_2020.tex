@@ -70,7 +70,7 @@ It is worth noting that within the literature $\mathcal{M}(n)$ often also referr
     \item For any two elements in $\mathcal{M}(n)$, $(A,x)$ and $(B,y)$, we must show that their resulting combination, $(AB,x+Ay)$ is also in $\mathcal{M}(n)$. This reduces once again down to a problem in the individual subgroups, we must show $x+Ay \in \mathbb{R}^{n}$ and $AB \in \mathcal{SO}(n)$. $AB$ belonging to $\mathcal{SO}(n)$ follows from $\mathcal{SO}(n)$ being a group. $x+Ay$ is $x$ in combination to an orthogonally transformed vector, $Ay$, which we consider rotated. Any rotated vector in $\mathbb{R}^{n}$ is still contained within the group $(\mathbb{R}^{n},+)$, it follows that $x+Ay$ is in $\mathbb{R}^{n}$. \end{enumerate}
 \end{proof}
 
-\section{Representations} 
+\section{Representations and Miscellaneous Definitions} 
 
 \begin{Define}{Representation}
     A representation $\rho$ is a function which maps elements of a group $G$ to operators on a vector space $\mathcal{GL}(V)$. \[ \rho : G \rightarrow \mathcal{GL}(V) .\]
@@ -104,21 +104,51 @@ After we are in a vector space we can begin to do analysis and even differential
     A representation is irreducible if its only subrepresentations are where $S=0$ or $S=V$.
 \end{Define}
 
-\begin{Remark}{Representations as Operators}
-    
-\end{Remark}
+%\begin{Remark}{Representations as Operators}
+%    
+%\end{Remark}
 
 \begin{Remark}{Some notes on LCA groups, Peter-Weyl theorem}
-
-    Ending point: for a simple example please see Maschke's theorem for $S_{n}$.
+    For locally compact abelian groups, we can find the characters -- one dimensional complex-valued representations in the dual group. For compact groups we can use the Peter-Weyl theorem to decompose the representations into an infinite sum of integer order vector spaces. For $\mathcal{M}(2)$, we have only that it is locally compact, because of this we are using the Mackey machine to achieve our irreducible unitary representations. 
 \end{Remark}
+
+\begin{Define}{Integral Representation}
+    \label{sec:bessel_integral}
+    $J_{\alpha}$ can also be expressed as integral equations
+    \[ J_\alpha(x) = \frac{1}{\pi} \int^{\pi}_{0} \cos\left(x \sin\left(\theta\right) - \alpha\theta\right)  \ d\theta = \frac{i^{-\alpha}}{\pi} \int^{\pi}_{0} e^{ix \cos\left(\theta\right)} \cos\left(\alpha\theta\right) \ d\theta .\] 
+    \par
+\end{Define}
+Should $\alpha$ not be an integer, then we attain $Y_{\alpha}$ which is termed a \textit{Bessel function of the second kind} with order $\alpha$.
+
+\begin{Theorem}{Properties of the Bessel function} For $n \in \mathbb{Z}$
+    \[%
+        J_{-n} = (-1)^{n}J_{n} 
+    \]%
+    and
+    \[%
+        \overline{J_{n}(x)} = J_{n}(\overline{x}).
+    \]%
+    \QED
+\end{Theorem}
+
+\begin{Define}{Hankel Transform}
+    The Hankel transform is given by:
+    \[
+        F_{\nu}(k) = \int^{\infty}_{0} f(r) J_{\nu}(kr) \ r \ dr
+    \]
+    and the inverse Hankel transform by
+    \[
+        f(r) = \int^{\infty}_{0} F_{\nu}J_{\nu}(kr) \ k \ dk.
+    \]
+    Interestingly, the integration-kernel of the integral transform is the same in both formulae. The function $f$ uses the variable $r$ to indicate the function is usually radially symmetric.
+\end{Define}
 
 
 \section{Induced Representations} 
 \label{sec:induced_representations}
 Frobenius originally worked on induced representations for finite groups, though the technique was generalised to continuous groups by Mackey. This technique is used here to take a subgroup $H$ whose representations we do know, and \textit{induce} them onto the group $G$ where $H < G$. 
 
-We will later use induced representations to generate the representations of the group of two-dimensional Euclidean motions ($\mathcal{M}(2)$) in Chapter 7. The requirement of using induced representations on $\mathcal{M}(2)$ comes from the fact that it is not compact (only locally compact) and non-commutative (because of matrix multiplication). 
+The requirement of using induced representations on $\mathcal{M}(2)$ comes from the fact that it is not compact (only locally compact) and non-commutative (because of matrix multiplication). 
 
 Let $G$ be a locally compact group, $H$ a subgroup, and $\xi$ is a unitary representation of $H$ on $\mathcal{H}_{\xi}$. We wish to create an induced representation $\sigma(g)$ by taking $\xi$ and inducing it onto $G$, or written formally 
 \[ 
@@ -149,15 +179,6 @@ We now define $\mathcal{H}_{\sigma}$ as the set of functions $f: G \rightarrow \
         \]%
 \end{enumerate}
 
-\begin{Theorem}{Mackey's Lemma}
-    If $G$ and $H$ are separable then there exists a quasi-invariant measure on $G/H$.\QED
-\end{Theorem}
-
-Although we are always aiming to obtain an invariant measure, that is not always possible, but Mackey tells us that there always exists a quasi-invariant measure. We now define invariant and quasi-invariant measures. 
-
-First suppose we have $E \subseteq G/H$ with associative law $\star$ and an element $g_1 \in G$.
-    
-
 \begin{Define}{Invariant measure}
     An invariant measure has the property 
     \[ 
@@ -177,7 +198,7 @@ First suppose we have $E \subseteq G/H$ with associative law $\star$ and an elem
 
 \begin{Define}{$\mu \circ g (E)$}
     \[%
-        \mu \circ g = \mu(E \star g) 
+        \mu \circ g(E) = \mu(E \star g) 
     \]%
 \end{Define}
 
@@ -193,6 +214,16 @@ If we have a quasi-invariant measure, we know there exists a function that will 
         \nu(A) = \int_{A} f \ d\mu 
     \]%
 \end{Theorem}
+
+\begin{Theorem}{Mackey's Lemma}
+    If $G$ and $H$ are separable then there exists a quasi-invariant measure on $G/H$.\QED
+\end{Theorem}
+
+Although we are always aiming to obtain an invariant measure, that is not always possible, but Mackey tells us that there always exists a quasi-invariant measure. We now define invariant and quasi-invariant measures. 
+
+First suppose we have $E \subseteq G/H$ with associative law $\star$ and an element $g_1 \in G$.
+    
+
     
 \begin{define}
     We now define  $\sigma$  acting on $\mathcal{H}_{\sigma}$  by 
@@ -439,6 +470,7 @@ It's easy to see how we could implement this in a computer. We would simply limi
 
 \small
 \[%
+    \hspace{-1.3cm}
     \begin{matrix}
         m=0 &  \vspace{0.4cm}\\
         \begin{bmatrix} 
@@ -463,7 +495,6 @@ This begs the question, what are the elements of this matrix?
     \[%
         (U^{a}_{g})_{n,m} = {e^{-in\alpha} e^{i\varphi(n-m)}i^{m-n}J_{m-n}(a\rho)}  \\ 
     \]%
-    More on $J_{m-n}(a\rho)$, the Bessel function of the first kind of order $m-n$, can be found in Section~\ref{sec:bessel_integral}.
 \end{theorem}
 
 \begin{proof}
@@ -537,17 +568,18 @@ This begs the question, what are the elements of this matrix?
     .\]%
 \end{proof}
 
-This begins to paint a picture about what a truncated version of $U^{a}_{g}$ may look like. Again, to compute these matrix coefficients is laborious and so we have produced the results with original code which can be found in appendix Section~\ref{sec:m2_reps}
+This begins to paint a picture about what a truncated version of $U^{a}_{g}$ may look like. Again, to compute these matrix coefficients is laborious and so we have produced the results with original code which can be found in appendix Section~\ref{sec:m2_reps}.
 
-$N=1$
+$$N=1$$
 \[
 \left[\begin{matrix}e^{i \alpha} J_{0}\left(a \rho\right) & i e^{i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right)\\i e^{i
  \phi} J_{1}\left(a \rho\right) & J_{0}\left(a \rho\right) & i e^{- i \phi} J_{1}\left(a \rho\right)\\- e^{- i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- i \alpha} e
 ^{i \phi} J_{1}\left(a \rho\right) & e^{- i \alpha} J_{0}\left(a \rho\right)\end{matrix}\right]
 \]
 
-$N=2$
+$$N=2$$
 \[
+\hspace{-1.5cm}
 \left[\begin{matrix}e^{2 i \alpha} J_{0}\left(a \rho\right) & i e^{2 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{2 i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) &
  - i e^{2 i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{2 i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right)\\i e^{i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{i \
 alpha} J_{0}\left(a \rho\right) & i e^{i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{i \alpha} e^{- 3 i \phi}
@@ -558,9 +590,10 @@ a \rho\right) & - i e^{- 2 i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e
 a \rho\right) & e^{- 2 i \alpha} J_{0}\left(a \rho\right)\end{matrix}\right]
 \]
 
-$N=3$
+$$N=3$$
 \tiny
 \[
+\hspace{-2.25cm}
 \left[\begin{matrix}e^{3 i \alpha} J_{0}\left(a \rho\right) & i e^{3 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{3 i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{3 i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{3 i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right) & i e^{3 i \alpha} e^{- 5 i \phi} J_{5}\left(a \rho\right) & - e^{3 i \alpha} e^{- 6 i \phi} J_{6}\left(a \rho\right)\\i e^{2 i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{2 i \alpha} J_{0}\left(a \rho\right) & i e^{2 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{2 i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{2 i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{2 i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right) & i e^{2 i \alpha} e^{- 5 i \phi} J_{5}\left(a \rho\right)\\- e^{i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{i \alpha} e^{i \phi} J_ {1}\left(a \rho\right) & e^{i \alpha} J_{0}\left(a \rho\right) & i e^{i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{i \alpha} e^{- 3 i \phi} J_{3}\left(a \rho\right) & e^{i \alpha} e^{- 4 i \phi} J_{4}\left(a \rho\right)\\- i e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{2 i \phi} J_{2} \left(a \rho\right) & i e^{i \phi} J_{1}\left(a \rho\right) & J_{0}\left(a \rho\right) & i e^{- i \phi} J_{1}\left(a \rho\right) & - e^{- 2 i \phi} J_{2}\left(a \rho\right) & - i e^{- 3 i \phi} J_{3}\left(a \rho\right)\\e^{- i \alpha} e^{4 i \phi} J_{4}\left(a \rho\right) & - i e^{- i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{- i \alpha} e^{ 2 i \phi} J_{2}\left(a \rho\right) & i e^{- i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{- i \alpha} J_{0}\left(a \rho\right) & i e^{- i \alpha} e^{- i \phi} J_{1}\left(a \rho\right) & - e^{- i \alpha} e^{- 2 i \phi} J_{2}\left(a \rho\right)\\i e^{- 2 i \alpha} e^{5 i \phi} J_{5}\left(a \rho\right) & e^{- 2 i \alpha} e^{4 i \phi} J_{4}\left(a \rho\right) & - i e^{- 2 i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{- 2 i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- 2 i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{- 2 i \alpha} J_{0}\left(a \rho\right) & i e^{- 2 i \alpha} e^{- i \phi} J_{1}\left(a \rho\right)\\- e^{- 3 i \alpha} e^{6 i \phi} J_{6}\left(a \rho\right) & i e^{ - 3 i \alpha} e^{5 i \phi} J_{5}\left(a \rho\right) & e^{- 3 i \alpha} e^{4 i \phi} J_{4}\left(a \rho\right) & - i e^{- 3 i \alpha} e^{3 i \phi} J_{3}\left(a \rho\right) & - e^{ - 3 i \alpha} e^{2 i \phi} J_{2}\left(a \rho\right) & i e^{- 3 i \alpha} e^{i \phi} J_{1}\left(a \rho\right) & e^{- 3 i \alpha} J_{0}\left(a \rho\right)\end{matrix}\right]
 \]
 \normalsize
@@ -746,6 +779,17 @@ Then, we claim that the Fourier transform of a convolution of two functions on $
 
 \bibliographystyle{apalike}
 \bibliography{references}
+
+\clearpage
+\begin{center}
+\huge{\textbf{Appendix}}
+\end{center}
+\clearpage
+
+\section{Matrix Coefficients of Representations of $\mathcal{M}(2)$} 
+\label{sec:m2_reps}
+\lstinputlisting[language=Python]{uga_m2.py}
+
 
 \end{document}
 
